@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Universitas Satya Terra Bhinneka - PMB</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet" />
+  <style>
+    body {
+      font-family: "Nunito", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="font-sans text-gray-800">
+  <!-- Navbar -->
+  <header class="bg-white shadow fixed w-full top-0 z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-6">
+      <!-- Logo -->
+      <div class="flex items-center space-x-2">
+        <img src="/aset/background/logostb.png" alt="Logo" class="h-10" />
+      </div>
+      <!-- Menu -->
+      <nav class="hidden md:flex space-x-14">
+        <a class="hover:text-blue-600" id="index" style="cursor: pointer;">Home</a>
+        <a class="hover:text-blue-600" id="pendaftaran" style="cursor: pointer;">Info Pendaftaran</a>
+        <a class="hover:text-blue-600" id="beasiswa" style="cursor: pointer;">Beasiswa</a>
+        <a class="hover:text-blue-600" id="biayakuliah" style="cursor: pointer;">Biaya Kuliah</a>
+        <a class="hover:text-blue-600" id="sarana" style="cursor: pointer;">Sarana & Prasara</a>
+        <a class="hover:text-blue-600" id="faq" style="cursor: pointer;">FAQ</a>
+
+      </nav>
+      <!-- Button -->
+      <a class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700" id="form-pendaftaran"
+        style="cursor: pointer;">Pendaftaran</a>
+    </div>
+  </header>
+
+  <!-- hero dengan gedung baru -->
+  <section class="relative bg-cover bg-center text-white"
+    style="background-image: url('../aset/background/kampus.jpg')">
+    <!-- Overlay gelap -->
+    <div class="absolute inset-0 bg-black/50"></div>
+
+    <div class="relative max-w-7xl mx-auto px-6 py-48 gap-10 items-center">
+      <!-- Text Content -->
+      <div>
+        <h1 class="text-3xl md:text-5xl font-bold leading-tight mb-6">
+          Wujudkan Masa Depanmu Bersama<br />
+          <span class="text-green-500 w-48">Universitas Satya Terra Bhinneka</span>
+        </h1>
+        <p class="text-lg text-gray-200 mb-8 max-w-3xl">
+          Jadilah bagian dari kampus yang berkomitmen melahirkan generasi
+          unggul, inovatif, dan siap bersaing di dunia global. Jangan tunda,
+          mulailah langkahmu sekarang!
+        </p>
+        <div class="flex gap-4">
+          <a class="bg-green-600 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-green-400 transition"
+            id="form-pendaftaran" style="cursor: pointer;">
+            Daftar Sekarang
+          </a>
+          <a class="border border-white px-6 py-3 rounded-lg hover:bg-white hover:text-blue-700 transition"
+            id="form-pendaftaran" style="cursor: pointer;">
+            Info Pendaftaran
+          </a>
+        </div>
+      </div>
+
+
+  </section>
+
+  <!-- Program Studi -->
+  <section class="py-16 bg-white">
+    <div class="container mx-auto px-6">
+      <!-- Judul Section -->
+      <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">
+        Program Studi
+      </h2>
+
+      <!-- Grid Program Studi -->
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 text-center">
+        <!-- Prodi 1 -->
+        <div>
+          <img src="/aset/icon/prodi.png" alt="S1 Informatika" class="mx-auto mb-4 w-20 h-20" />
+          <h3 class="text-lg font-bold text-blue-900">
+            <a href="https://ftik.satyaterrabhinneka.ac.id/">S1 INFORMATIKA</a>
+          </h3>
+          <p class="text-gray-600 mt-2">
+            Our travel agency specializes in providing our customers with the
+            best deals on airline tickets.
+          </p>
+        </div>
+
+        <!-- Prodi 2 -->
+        <div>
+          <img src="/aset/icon/prodi.png" alt="S1 Bisnis Digital" class="mx-auto mb-4 w-20 h-20" />
+          <h3 class="text-lg font-bold text-blue-900">
+            <a href="https://feb.satyaterrabhinneka.ac.id/">S1 BISNIS DIGITAL</a>
+          </h3>
+          <p class="text-gray-600 mt-2">
+            Luxurious and comfortable way of travel, and passengers can enjoy
+            stunning views of the sea.
+          </p>
+        </div>
+
+        <!-- Prodi 3 -->
+        <div>
+          <img src="/aset/icon/prodi.png" alt="S1 Kewirausahaan" class="mx-auto mb-4 w-20 h-20" />
+          <h3 class="text-lg font-bold text-blue-900">
+            <a href="https://feb.satyaterrabhinneka.ac.id/">S1 KEWIRAUSAHAAN</a>
+          </h3>
+          <p class="text-gray-600 mt-2">
+            Our travel agency offers a variety of means of transport to get
+            you around your destination safely.
+          </p>
+        </div>
+
+        <!-- Prodi 4 -->
+        <div>
+          <img src="/aset/icon/prodi.png" alt="D3 Kebidanan" class="mx-auto mb-4 w-20 h-20" />
+          <h3 class="text-lg font-bold text-blue-900"><a href="https://fkes.satyaterrabhinneka.ac.id/">D3 KEBIDANAN</a>
+          </h3>
+          <p class="text-gray-600 mt-2">
+            Our team of experts will take care of all the planning and
+            logistics, providing you with a detailed itinerary.
+          </p>
+        </div>
+
+        <!-- Prodi 5 -->
+        <div>
+          <img src="/aset/icon/prodi.png" alt="S1 Manajemen Hutan" class="mx-auto mb-4 w-20 h-20" />
+          <h3 class="text-lg font-bold text-blue-900"><a href="https://fpkh.satyaterrabhinneka.ac.id/">S1 MANAJEMEN
+              HUTAN</a></h3>
+          <p class="text-gray-600 mt-2">
+            Travel insurance is an essential part of any trip, providing peace
+            of mind and protection.
+          </p>
+        </div>
+
+        <!-- Prodi 6 -->
+        <div>
+          <img src="/aset/icon/prodi.png" alt="S1 Agribisnis" class="mx-auto mb-4 w-20 h-20" />
+          <h3 class="text-lg font-bold text-blue-900">S1 AGRIBISNIS</h3>
+          <p class="text-gray-600 mt-2">
+            We can connect you with guides who will take you off the best path
+            and show you their city.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Jalur Pendaftaran -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-7xl mx-auto px-6 lg:px-12">
+      <!-- Atas -->
+      <div class="grid md:grid-cols-2 gap-10 items-center">
+        <!-- Text -->
+        <div>
+          <h2 class="text-3xl font-bold text-gray-900 mb-4">
+            Jalur pendaftaran Mahasiswa baru
+          </h2>
+          <p class="text-gray-700 mb-6">
+            Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ea
+            dolorem, sequi dolorum dignissimos qui accusamus ipsa autem quam
+            sit temporibus quas saepe quos aliquam exercitationem sed minus
+            sint debitis sapiente, veniam ratione alias laboriosam eaque
+            dolore. Eligendi reprehenderit quisquam eveniet modi vel dicta
+            earum placeat blanditiis libero voluptatibus impedit neque illum
+            doloribus, quos ipsum eius cumque at odio. Eum laudantium omnis,
+            dignissimos voluptatem voluptate numquam, aperiam repellat dolorem
+            aliquam voluptates ea? Cumque distinctio consectetur, asperiores
+            nemo natus laboriosam nihil odit!
+          </p>
+          <a href="#"
+            class="inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition">
+            Daftar Sekarang
+          </a>
+        </div>
+
+        <!-- Gambar -->
+        <div>
+          <img src="/aset/icon/2.png" alt="Universitas Satya Terra Bhinneka" class="rounded-lg shadow-lg" />
+        </div>
+      </div>
+
+      <!-- Bawah -->
+      <div class="grid md:grid-cols-3 gap-6 mt-12">
+        <!-- Jalur Mandiri -->
+        <div class="bg-green-700 text-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-2">Jalur Mandiri</h3>
+          <p class="mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet
+            sed id elementum. Quam vel aliquam sit vulputate.
+          </p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+            Cek Syarat
+          </a>
+        </div>
+
+        <!-- Jalur KIP Kuliah -->
+        <div class="bg-red-600 text-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-2">Jalur KIP Kuliah</h3>
+          <p class="mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet
+            sed id elementum. Quam vel aliquam sit vulputate.
+          </p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+            Cek Syarat
+          </a>
+        </div>
+
+        <!-- Jalur Scholarship -->
+        <div class="bg-blue-600 text-white p-6 rounded-lg shadow">
+          <h3 class="text-xl font-bold mb-2">Jalur Scholarship</h3>
+          <p class="mb-4">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Imperdiet
+            sed id elementum. Quam vel aliquam sit vulputate.
+          </p>
+          <a href="#" class="inline-block bg-black text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition">
+            Cek Syarat
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Unit Prestasi -->
+  <section class="py-16 bg-gray-100">
+    <div class="container mx-auto px-6">
+      <!-- Judul Section -->
+      <h2 class="text-2xl md:text-3xl font-bold text-center text-gray-900 mb-4">
+        UNIT PRESTASI MAHASISWA
+      </h2>
+      <p class="text-center text-gray-700 max-w-3xl mx-auto mb-12">
+        "Selain berprestasi di bidang akademik, Anda juga bisa menyalurkan
+        minat dan bakat melalui unit prestasi di Universitas Satya Terra
+        Bhinneka, tempat terbaik untuk tumbuh dan berkarya."
+      </p>
+
+      <!-- Grid UPM -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mb-10">
+        <!-- Card 1 -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
+          <img src="/aset/icon/futsal.jpg" alt="Futsal Club" class="mx-auto mb-4 w-28 h-28 object-contain" />
+          <h3 class="text-lg font-bold text-blue-900">Futsal Club</h3>
+          <p class="text-sm text-gray-700">Satya Terra Bhinneka</p>
+          <p class="text-xs text-gray-500 mt-2">Since 2025</p>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
+          <img src="/aset/icon/english.jpg" alt="English Club" class="mx-auto mb-4 w-28 h-28 object-contain" />
+          <h3 class="text-lg font-bold text-blue-900">English Club</h3>
+          <p class="text-sm text-gray-700">Satya Terra Bhinneka</p>
+          <p class="text-xs text-gray-500 mt-2">Since 2025</p>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
+          <img src="/aset/icon/basket.jpg" alt="Basketball Club" class="mx-auto mb-4 w-28 h-28 object-contain" />
+          <h3 class="text-lg font-bold text-blue-900">Basketball Club</h3>
+          <p class="text-sm text-gray-700">Satya Terra Bhinneka</p>
+          <p class="text-xs text-gray-500 mt-2">Since 2025</p>
+        </div>
+
+        <!-- Card 4 -->
+        <div class="bg-white rounded-lg shadow-md p-6 text-center hover:shadow-lg transition">
+          <img src="/aset/icon/chess.jpg" alt="Chess Club" class="mx-auto mb-4 w-28 h-28 object-cover rounded-md" />
+          <h3 class="text-lg font-bold text-blue-900">Chess Club</h3>
+          <p class="text-sm text-gray-700">Satya Terra Bhinneka</p>
+          <p class="text-xs text-gray-500 mt-2">Since 2025</p>
+        </div>
+      </div>
+
+      <!-- Button -->
+      <div class="text-center">
+        <a href="#upm"
+          class="inline-block bg-green-600 text-white px-6 py-3 rounded-md shadow hover:bg-green-700 transition">
+          Lihat Seluruh UPM
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Profile -->
+  <section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold">Video Profile</h2>
+      <h2 class="text-2xl font-bold mb-6">
+        Universitas Satya Terra Bhinneka
+      </h2>
+      <div class="aspect-w-12 aspect-h-9">
+        <iframe class="mx-auto" width="900" height="450" src="https://www.youtube.com/embed/elXYWpA-wPw"
+          title="Mata Kuliah Wajib Pendidikan untuk Pembangunan Berkelanjutan ESD di Universitas Satya Terra Bhinneka"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      </div>
+      <p class="mt-6 text-gray-600 font-bold">
+        Kenali kampus kami lebih jauh dengan menonton video profile ini.
+      </p>
+      "Video ini memperkenalkan Universitas Satya Terra Bhinneka sebagai
+      institusi pendidikan tinggi dengan layanan akademik berkualitas dan
+      lingkungan belajar yang kondusif. Dilengkapi ruang kuliah modern,
+      laboratorium mutakhir, serta berbagai fasilitas penunjang, universitas
+      ini berkomitmen melahirkan lulusan yang unggul, berintegritas, dan siap
+      bersaing di tingkat nasional maupun internasional."
+    </div>
+  </section>
+
+  <!-- Mitra -->
+  <section class="py-16">
+    <div class="container mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold mb-6">Mitra Kerja Sama</h2>
+      <p class="text-gray-600 max-w-2xl mx-auto mb-10">
+        Universitas Satya Terra Bhinneka menjalin kerja sama dengan berbagai
+        lembaga, institusi, dan dunia industri untuk mendukung pengembangan
+        akademik, penelitian, serta peningkatan kompetensi mahasiswa.
+      </p>
+      <div class="flex flex-row justify-center gap-10 w-40 mx-auto">
+        <img src="/aset/mitra/asean.png" alt="Mitra 1" />
+        <img src="/aset/mitra/bei.jpg" alt="Mitra 2" />
+        <img src="/aset/mitra/PANDI.png" alt="Mitra 3" />
+        <img src="/aset/mitra/MULTIMATICS.png" alt="Mitra 4" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-emerald-800 text-white py-8">
+    <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+      <!-- Deskripsi -->
+      <div>
+        <img src="../aset/background/logostb.png" alt="Logo Universitas Satya Terra Bhinneka" class="max-w-xl" />
+
+        <p>
+          Menjadi bagian dari Universitas Satya Terra Bhinneka, kampus yang
+          berkomitmen mencetak generasi bangsa unggul, kreatif, serta
+          berakhlak mulia.
+        </p>
+        <div class="flex space-x-4 mt-4">
+          <a href="#"><img src="https://via.placeholder.com/24" alt="Facebook" /></a>
+          <a href="#"><img src="https://via.placeholder.com/24" alt="Instagram" /></a>
+          <a href="#"><img src="https://via.placeholder.com/24" alt="YouTube" /></a>
+        </div>
+      </div>
+      <!-- Menu -->
+      <div>
+        <h3 class="font-bold mb-2">Menu</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="#prodi" class="hover:text-blue-400">Program Studi</a>
+          </li>
+          <li>
+            <a href="#pendaftaran" class="hover:text-blue-400">Pendaftaran</a>
+          </li>
+          <li>
+            <a href="#beasiswa" class="hover:text-blue-400">Beasiswa</a>
+          </li>
+          <li><a href="#mitra" class="hover:text-blue-400">Mitra</a></li>
+        </ul>
+      </div>
+      <!-- Kontak -->
+      <div>
+        <h3 class="font-bold mb-2">Kontak</h3>
+        <p>📍 Jl. Sunggal, Gg Bakul No. 123, Kota Medan</p>
+        <p>📞 (021) 12345678</p>
+        <p>✉️ satyaterrabhinneka@satyaterrabhinneka.ac.id</p>
+      </div>
+    </div>
+    <div class="text-center mt-6 text-gray-400">
+      &copy; 2025 Universitas Satya Terra Bhinneka. All rights reserved.
+    </div>
+  </footer>
+
+  <script src="../../api/pages/homepage.js"></script>
+  <script src="../../api/pages/form.js"></script>
+</body>
+
+</html>

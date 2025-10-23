@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <link rel="stylesheet" href="../../aset/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+    }
+  </style>
+</head>
+
+<body>
+<!-- Data Orang Tua -->
+ <div class="container">
+ <form method="POST" id="form-data-orangtua">
+  <fieldset>
+        <legend>Data Orang Tua / Wali</legend>
+        <h4>Ayah</h4>
+        <label>Nama Lengkap Ayah:</label>
+        <input type="text" name="nama_lengkap_ayah" id="nama_lengkap_ayah">
+        <label>Kondisi:</label>
+        <input type="text" name="kondisi" id="kondisi">
+        <!-- type data combo box
+          if kondisi meninggal next ke pengisian data ibu
+          else kondisi hidup lanjut isi data 
+        -->
+        <label>Pendidikan Terakhir Ayah:</label>
+          <select id="pendidikan" name="pendidikan" class="w-full p-2 border rounded">
+            <option value="">-- Pilih Pendidikan Terakhir --</option>
+            <option value="sd_mi">SD / MI</option>
+            <option value="smp_mts">SMP / MTs</option>
+            <option value="sma_smk_ma">SMA / SMK / MA</option>
+            <option value="d1">Diploma 1 (D1)</option>
+            <option value="d2">Diploma 2 (D2)</option>
+            <option value="d3">Diploma 3 (D3)</option>
+            <option value="s1">Sarjana (S1)</option>
+            <option value="s2">Magister (S2)</option>
+            <option value="s3">Doktoral (S3)</option>
+          </select>
+        <!-- type data combo box -->
+        <label>Pekerjaan Ayah:</label>
+        <select id="pekerjaan" name="pekerjaan" class="w-full p-2 border rounded">
+          <option value="">-- Pilih Jenis Pekerjaan --</option>
+          <option value="pns">PNS</option>
+          <option value="tni_polri">TNI / POLRI</option>
+          <option value="pegawai_swasta">Pegawai Swasta</option>
+          <option value="wiraswasta">Wiraswasta / Usahawan</option>
+          <option value="petani">Petani</option>
+          <option value="nelayan">Nelayan</option>
+          <option value="buruh">Buruh / Pekerja Harian</option>
+          <option value="sopir">Sopir / Driver</option>
+          <option value="pedagang">Pedagang</option>
+          <option value="guru">Guru</option>
+          <option value="dosen">Dosen</option>
+          <option value="dokter">Dokter </option>
+          <option value="perawat">Perawat</option>
+          <option value="pensiunan">Pensiunan</option>
+          <option value="ibu_rumah_tangga">Ibu Rumah Tangga</option>
+          <option value="penarik_becak">Penarik Becak</option>
+          <option value="kuli_bangunan">Kuli Bangunan</option>
+          <option value="tidak_bekerja">Tidak Bekerja</option>
+          <option value="lainnya">Lainnya</option>
+        </select>
+          <!-- type data combo box -->
+        <label>Penghasilan Ayah:</label>
+        <input type="number" name="penghasilan_ayah" id="penghasilan_ayah">
+
+        <h4>Ibu</h4>
+        <label>Nama Ibu:</label>
+        <input type="text" name="nama_lengkap_ibu" id="nama_lengkap_ibu">
+        <label>Pendidikan Terakhir Ibu:</label>
+          <select id="pendidikan" name="pendidikan" class="w-full p-2 border rounded">
+            <option value="">-- Pilih Pendidikan Terakhir --</option>
+            <option value="sd_mi">SD / MI</option>
+            <option value="smp_mts">SMP / MTs</option>
+            <option value="sma_smk_ma">SMA / SMK / MA</option>
+            <option value="d1">Diploma 1 (D1)</option>
+            <option value="d2">Diploma 2 (D2)</option>
+            <option value="d3">Diploma 3 (D3)</option>
+            <option value="s1">Sarjana (S1)</option>
+            <option value="s2">Magister (S2)</option>
+            <option value="s3">Doktoral (S3)</option>
+          </select>
+        <label>Pekerjaan Ibu:</label>
+        <select id="pekerjaan" name="pekerjaan" class="w-full p-2 border rounded">
+          <option value="">-- Pilih Jenis Pekerjaan --</option>
+          <option value="pns">PNS</option>
+          <option value="tni_polri">TNI / POLRI</option>
+          <option value="pegawai_swasta">Pegawai Swasta</option>
+          <option value="wiraswasta">Wiraswasta / Usahawan</option>
+          <option value="petani">Petani</option>
+          <option value="nelayan">Nelayan</option>
+          <option value="buruh">Buruh / Pekerja Harian</option>
+          <option value="sopir">Sopir / Driver</option>
+          <option value="pedagang">Pedagang</option>
+          <option value="guru">Guru</option>
+          <option value="dosen">Dosen</option>
+          <option value="dokter">Dokter </option>
+          <option value="perawat">Perawat</option>
+          <option value="pensiunan">Pensiunan</option>
+          <option value="ibu_rumah_tangga">Ibu Rumah Tangga</option>
+          <option value="penarik_becak">Penarik Becak</option>
+          <option value="kuli_bangunan">Kuli Bangunan</option>
+          <option value="tidak_bekerja">Tidak Bekerja</option>
+          <option value="lainnya">Lainnya</option>
+        </select>
+        <label>Penghasilan Ibu:</label>
+        <input type="number" name="penghasilan_ibu" id="penghasilan_ibu">
+
+        <label>Nomor HP Orang Tua:</label>
+        <input type="text" name="nomor_hp_orangtua" id="nomor_hp_orangtua">
+          <label>Alamat Orang Tua:</label>
+        <input type="text" name="alamat_orangtua" id="alamat_orangtua">
+        <!-- <h4>Wali (Opsional)</h4>
+        <label>Nama Wali:</label>
+        <input type="text" name="nama_wali">
+        <label>Pekerjaan Wali:</label>
+        <input type="text" name="pekerjaan_wali">
+      </fieldset> -->
+      <!--
+       guru
+       bumn
+
+       -->
+      <!-- 
+      buat pakai select2
+
+      sd/mi
+      smp/mts
+      sma/smk/ma
+      diploma 1
+      diploma 2
+      diploma 3
+      sarjana
+      magister
+      doktoral
+
+      -->
+<button type="submit">Submit</button>
+
+ </form>
+ </div>
+
+  <script type="module" src="../api/calon_mahasiswa_baru/tambah_data_orangtua_calon_mahasiswa_baru.js"></script>
+
+    </body>

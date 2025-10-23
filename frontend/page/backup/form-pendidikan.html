@@ -1,0 +1,175 @@
+ <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <link rel="stylesheet" href="../../aset/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+<form action="" id="form-pendidikan" method="POST">
+ <fieldset>
+        <legend>Pendidikan Asal</legend>
+        
+        <label>Jenjang:</label>
+        <select name="jenjang" id="jenjang" required>
+          <option value="">-- Pilih --</option>
+          <option value="sma">SMA</option>
+          <option value="smk">SMK</option>
+          <option value="ma">MA</option>
+        </select>
+
+           <label>Jurusan:</label>
+      <select name="jurusan" id="jurusan" required>
+      
+        </select>
+
+        <label>Tahun Lulus:</label>
+        <!-- buat otomatis logic untuk maksimal daftar kuliah 
+         dikurang 5 tahun dari waktu berjalan sekarang 
+         type combobox
+         -->
+        <select name="tahun_lulus" id="tahun_lulus" required>
+            <option value="" disabled selected>-- Pilih Tahun --</option>
+        </select>
+        
+        <label>Nama Sekolah:</label>
+        <input type="text" id="asal_sekolah" name="asal_sekolah" required>
+
+
+        <label>Nomor Ijazah:</label>
+        <input type="text" name="nomor_ijazah" id="nomor_ijazah">
+
+        <label>Nilai Rata-rata:</label>
+        <input type="text" name="nilai_rapor" id="nilai_rapor">
+      </fieldset>
+            <button type="submit">Submit</button>
+
+      </form>
+</div>
+<!--#NOTE tambah default -->
+      <script>
+        const jurusanSMK = `
+      <optgroup label="Teknologi dan Rekayasa">
+        <option value="TKRO">Teknik Kendaraan Ringan Otomotif (TKRO)</option>
+        <option value="TBSM">Teknik dan Bisnis Sepeda Motor (TBSM)</option>
+        <option value="TKJ">Teknik Komputer dan Jaringan (TKJ)</option>
+        <option value="RPL">Rekayasa Perangkat Lunak (RPL)</option>
+        <option value="MM">Multimedia (MM) / DKV</option>
+        <option value="ELIN">Teknik Elektronika Industri</option>
+        <option value="Listrik">Teknik Listrik / Instalasi Tenaga Listrik</option>
+        <option value="Mesin">Teknik Mesin</option>
+        <option value="Konstruksi">Teknik Konstruksi dan Properti</option>
+      </optgroup>
+      <optgroup label="Kesehatan dan Pekerjaan Sosial">
+        <option value="Keperawatan">Asisten Keperawatan</option>
+        <option value="Farmasi">Farmasi Klinis dan Komunitas</option>
+        <option value="LabMedik">Teknologi Laboratorium Medik</option>
+        <option value="Caregiver">Caregiver (Perawatan Sosial)</option>
+      </optgroup>
+      <optgroup label="Pariwisata">
+        <option value="Perhotelan">Perhotelan</option>
+        <option value="TataBoga">Tata Boga</option>
+        <option value="TataBusana">Tata Busana</option>
+        <option value="UPW">Usaha Perjalanan Wisata (UPW)</option>
+        <option value="Kecantikan">Kecantikan Kulit dan Rambut</option>
+      </optgroup>
+      <optgroup label="Bisnis dan Manajemen">
+        <option value="AKL">Akuntansi dan Keuangan Lembaga (AKL)</option>
+        <option value="OTKP">Otomatisasi dan Tata Kelola Perkantoran (OTKP)</option>
+        <option value="BDP">Bisnis Daring dan Pemasaran (BDP)</option>
+        <option value="Manajemen">Manajemen Perkantoran</option>
+      </optgroup>
+      <optgroup label="Seni dan Industri Kreatif">
+        <option value="Musik">Seni Musik</option>
+        <option value="Tari">Seni Tari</option>
+        <option value="Rupa">Seni Rupa</option>
+        <option value="Broadcasting">Broadcasting</option>
+        <option value="Animasi">Animasi</option>
+      </optgroup>
+    `;
+
+    const jurusanSMA = `
+      <option value="IPA">IPA (Ilmu Pengetahuan Alam)</option>
+      <option value="IPS">IPS (Ilmu Pengetahuan Sosial)</option>
+      <option value="Bahasa">Bahasa dan Budaya</option>
+    `;
+
+    const jurusanMA = `
+      <option value="Agama">Agama</option>
+      <option value="IPA">IPA (Ilmu Pengetahuan Alam)</option>
+      <option value="IPS">IPS (Ilmu Pengetahuan Sosial)</option>
+      <option value="Bahasa">Bahasa</option>
+    `;
+
+    const jenjangSelect = document.getElementById('jenjang');
+    const jurusanSelect = document.getElementById('jurusan');
+
+    jenjangSelect.addEventListener('change', function() {
+      let value = this.value;
+      jurusanSelect.innerHTML = '<option value="">-- Pilih Jurusan --</option>'; // reset isi
+
+      if (value === "smk") {
+        jurusanSelect.insertAdjacentHTML("beforeend", jurusanSMK);
+      } else if (value === "sma") {
+        jurusanSelect.insertAdjacentHTML("beforeend", jurusanSMA);
+      } else if (value === "ma") {
+        jurusanSelect.insertAdjacentHTML("beforeend", jurusanMA);
+      }
+    });
+  
+     // Menjalankan script setelah seluruh halaman HTML selesai dimuat
+        document.addEventListener('DOMContentLoaded', function() {
+            
+            // 1. Dapatkan elemen <select> dari HTML menggunakan ID-nya
+            const selectElement = document.getElementById('tahun_lulus');
+            
+            // 2. Dapatkan tahun saat ini secara dinamis
+            // Berdasarkan waktu sekarang, ini akan menghasilkan: 2025
+            const tahunSekarang = new Date().getFullYear();
+            
+            // 3. Tentukan tahun minimum sesuai logika (tahun sekarang - 5)
+            // Hasilnya: 2025 - 5 = 2020
+            const tahunMinimum = tahunSekarang - 5;
+            
+            // 4. Lakukan perulangan dari tahun terbaru ke terlama untuk membuat opsi
+            for (let tahun = tahunSekarang; tahun >= tahunMinimum; tahun--) {
+                // Buat elemen <option> baru di setiap perulangan
+                const option = document.createElement('option');
+                
+                // Atur nilai (value) dari option
+                option.value = tahun;
+                
+                // Atur teks yang akan ditampilkan di dropdown
+                option.textContent = tahun;
+                
+                // Tambahkan elemen <option> yang baru dibuat ke dalam <select>
+                selectElement.appendChild(option);
+            }
+        });
+      </script>
+
+  <script type="module" src="../api/calon_mahasiswa_baru/tambah_data_pendidikan_calon_mahasiswa_baru.js"></script>
+
+</body>

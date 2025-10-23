@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Biaya Kuliah - Universitas Satya Terra Bhinneka</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="font-sans text-gray-800">
+    <!-- Header  -->
+    <header class="bg-white shadow fixed w-full top-0 z-50">
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="../aset/background/logostb.png" alt="Logo" class="h-10" />
+        </div>
+        <!-- Menu -->
+      <nav class="hidden md:flex space-x-14">
+          <a class="hover:text-blue-600" id="index" style="cursor: pointer;">Home</a>
+          <a  class="hover:text-blue-600" id="pendaftaran" style="cursor: pointer;"
+            >Info Pendaftaran</a
+          >
+          <a class="hover:text-blue-600" id="beasiswa" style="cursor: pointer;">Beasiswa</a>
+          <a class="hover:text-blue-600" id="biayakuliah" style="cursor: pointer;">Biaya Kuliah</a>
+          <a class="hover:text-blue-600" id="sarana" style="cursor: pointer;">Sarana & Prasara</a>
+          <a class="hover:text-blue-600" id="faq" style="cursor: pointer;">FAQ</a>
+
+        </nav>
+        <!-- Button -->
+        <a
+           
+          class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700" 
+          id="form-pendaftaran"
+          style="cursor: pointer;"
+          >Pendaftaran</a
+        >
+      </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-white"
+      style="background-image: url('../aset/background/kampus.jpg')"
+    >
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative text-center">
+        <h1 class="text-4xl md:text-6xl font-bold">Biaya Kuliah</h1>
+        <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+          Informasi lengkap mengenai biaya pendidikan di Universitas Satya Terra
+          Bhinneka.
+        </p>
+      </div>
+    </section>
+
+    <!-- Biaya Kuliah Section -->
+    <section class="max-w-7xl mx-auto px-6 py-16">
+      <h2 class="text-3xl font-bold text-center mb-12">Tabel Biaya Kuliah</h2>
+
+      <div class="overflow-x-auto">
+        <table
+          class="w-full border border-gray-300 text-left shadow-md rounded-lg overflow-hidden"
+        >
+          <thead class="bg-blue-900 text-white">
+            <tr>
+              <th class="px-6 py-3">Fakultas</th>
+              <th class="px-6 py-3">Program Studi</th>
+              <th class="px-6 py-3">Biaya Pendaftaran</th>
+              <th class="px-6 py-3">SPP per Semester</th>
+              <th class="px-6 py-3">Total Tahun Pertama</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="border-t hover:bg-gray-50">
+              <td class="px-6 py-3">Fakultas Teknologi dan Ilmu Komputer</td>
+              <td class="px-6 py-3">S1 Informatika</td>
+              <td class="px-6 py-3">Rp 500.000</td>
+              <td class="px-6 py-3">Rp 6.000.000</td>
+              <td class="px-6 py-3">Rp 6.500.000</td>
+            </tr>
+            <tr class="border-t hover:bg-gray-50">
+              <td class="px-6 py-3">Fakultas Ekonomi dan Bisnis</td>
+              <td class="px-6 py-3">S1 Bisnis Digital</td>
+              <td class="px-6 py-3">Rp 500.000</td>
+              <td class="px-6 py-3">Rp 6.000.000</td>
+              <td class="px-6 py-3">Rp 6.500.000</td>
+            </tr>
+            <tr class="border-t hover:bg-gray-50">
+              <td class="px-6 py-3">Fakultas Ekonomi dan Bisnis</td>
+              <td class="px-6 py-3">S1 Kewirausahaan</td>
+              <td class="px-6 py-3">Rp 500.000</td>
+              <td class="px-6 py-3">Rp 6.000.000</td>
+              <td class="px-6 py-3">Rp 6.500.000</td>
+            </tr>
+            <tr class="border-t hover:bg-gray-50">
+              <td class="px-6 py-3">Fakultas Pertanian dan Kehutanan</td>
+              <td class="px-6 py-3">S1 Manajemen Hutan</td>
+              <td class="px-6 py-3">Rp 500.000</td>
+              <td class="px-6 py-3">Rp 5.500.000</td>
+              <td class="px-6 py-3">Rp 6.000.000</td>
+            </tr>
+            <tr class="border-t hover:bg-gray-50">
+              <td class="px-6 py-3">Fakultas Pertanian dan Kehutanan</td>
+              <td class="px-6 py-3">S1 Agribisnis</td>
+              <td class="px-6 py-3">Rp 500.000</td>
+              <td class="px-6 py-3">Rp 6.500.000</td>
+              <td class="px-6 py-3">Rp 7.000.000</td>
+            </tr>
+            <tr class="border-t hover:bg-gray-50">
+              <td class="px-6 py-3">Fakultas Kesehatan</td>
+              <td class="px-6 py-3">D3 Kebidanan</td>
+              <td class="px-6 py-3">Rp 500.000</td>
+              <td class="px-6 py-3">Rp 5.000.000</td>
+              <td class="px-6 py-3">Rp 5.500.000</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Alur Pembayaran Section -->
+    <section class="bg-gray-50 py-16">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2 class="text-3xl font-bold text-center mb-12">Alur Pembayaran</h2>
+
+        <div class="space-y-8">
+          <!-- Step 1 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-12 h-12 bg-blue-900 text-white flex items-center justify-center rounded-full font-bold"
+            >
+              1
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">
+                Registrasi & Mendapatkan Nomor Virtual Account
+              </h3>
+              <p class="text-gray-600">
+                Mahasiswa baru mendaftar dan mendapatkan nomor VA untuk
+                pembayaran biaya kuliah.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-12 h-12 bg-blue-900 text-white flex items-center justify-center rounded-full font-bold"
+            >
+              2
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Melakukan Pembayaran</h3>
+              <p class="text-gray-600">
+                Pembayaran dapat dilakukan melalui ATM, mobile banking, atau
+                teller bank yang bekerja sama.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-12 h-12 bg-blue-900 text-white flex items-center justify-center rounded-full font-bold"
+            >
+              3
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">Konfirmasi Otomatis</h3>
+              <p class="text-gray-600">
+                Setelah pembayaran berhasil, sistem akan otomatis melakukan
+                verifikasi.
+              </p>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="flex items-start gap-4">
+            <div
+              class="w-12 h-12 bg-blue-900 text-white flex items-center justify-center rounded-full font-bold"
+            >
+              4
+            </div>
+            <div>
+              <h3 class="text-xl font-semibold">
+                Cetak Bukti & Resmi Terdaftar
+              </h3>
+              <p class="text-gray-600">
+                Mahasiswa dapat mencetak bukti pembayaran sebagai tanda resmi
+                telah terdaftar.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+
+    <!-- FAQ Section -->
+    <section class="py-20 bg-gradient-to-b from-blue-50 to-white">
+      <div class="max-w-5xl mx-auto px-6">
+        <h2
+          class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-14"
+        >
+          Pertanyaan yang Sering Diajukan
+        </h2>
+
+        <div class="space-y-4">
+          <!-- FAQ Item -->
+          <div
+            class="border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+          >
+            <button
+              class="w-full flex justify-between items-center px-6 py-4 bg-white hover:bg-blue-50 transition text-left"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="font-semibold text-gray-800">
+                Apakah biaya kuliah bisa dicicil?
+              </span>
+              <svg
+                class="w-6 h-6 text-blue-600 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="px-6 pb-4 text-gray-600 hidden">
+              Ya, Universitas Satya Terra Bhinneka menyediakan opsi pembayaran
+              cicilan per bulan atau per tahap sesuai dengan kebijakan kampus.
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div
+            class="border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+          >
+            <button
+              class="w-full flex justify-between items-center px-6 py-4 bg-white hover:bg-blue-50 transition text-left"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="font-semibold text-gray-800">
+                Bagaimana jika terlambat membayar biaya kuliah?
+              </span>
+              <svg
+                class="w-6 h-6 text-blue-600 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="px-6 pb-4 text-gray-600 hidden">
+              Mahasiswa yang terlambat membayar akan dikenakan denda
+              administrasi sesuai peraturan yang berlaku. Disarankan untuk
+              melakukan pembayaran sebelum jatuh tempo.
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div
+            class="border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+          >
+            <button
+              class="w-full flex justify-between items-center px-6 py-4 bg-white hover:bg-blue-50 transition text-left"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="font-semibold text-gray-800">
+                Apakah ada beasiswa yang tersedia?
+              </span>
+              <svg
+                class="w-6 h-6 text-blue-600 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="px-6 pb-4 text-gray-600 hidden">
+              Tentu! Kampus menyediakan berbagai jenis beasiswa, termasuk KIP
+              Kuliah, beasiswa prestasi akademik, dan bantuan khusus mahasiswa.
+            </div>
+          </div>
+
+          <!-- FAQ Item -->
+          <div
+            class="border border-gray-200 rounded-xl shadow-sm overflow-hidden"
+          >
+            <button
+              class="w-full flex justify-between items-center px-6 py-4 bg-white hover:bg-blue-50 transition text-left"
+              onclick="toggleFAQ(this)"
+            >
+              <span class="font-semibold text-gray-800">
+                Apakah biaya kuliah sama untuk semua program studi?
+              </span>
+              <svg
+                class="w-6 h-6 text-blue-600 transition-transform duration-300"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+              >
+                <path d="M19 9l-7 7-7-7" />
+              </svg>
+            </button>
+            <div class="px-6 pb-4 text-gray-600 hidden">
+              Tidak, biaya kuliah berbeda untuk setiap fakultas dan program
+              studi. Silakan cek tabel biaya kuliah di atas untuk detail lebih
+              lengkap.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <script>
+      function toggleFAQ(button) {
+        const content = button.nextElementSibling;
+        const icon = button.querySelector("svg");
+
+        // Tutup semua FAQ lain dulu
+        document
+          .querySelectorAll("section .space-y-4 div div")
+          .forEach((div) => {
+            if (div !== content) div.classList.add("hidden");
+          });
+        document.querySelectorAll("section .space-y-4 svg").forEach((svg) => {
+          if (svg !== icon) svg.classList.remove("rotate-180");
+        });
+
+        // Toggle yang diklik
+        content.classList.toggle("hidden");
+        icon.classList.toggle("rotate-180");
+      }
+    </script>
+
+    <footer class="bg-emerald-800 text-white py-8">
+      <div class="container mx-auto px-6 grid md:grid-cols-3 gap-8">
+        <!-- Deskripsi -->
+        <div>
+          <img
+            src="assets/background/logostb.png"
+            alt="Logo Universitas Satya Terra Bhinneka"
+            class="max-w-xl"
+          />
+
+          <p>
+            Menjadi bagian dari Universitas Satya Terra Bhinneka, kampus yang
+            berkomitmen mencetak generasi bangsa unggul, kreatif, serta
+            berakhlak mulia.
+          </p>
+          <div class="flex space-x-4 mt-4">
+            <a href="#"
+              ><img src="https://via.placeholder.com/24" alt="Facebook"
+            /></a>
+            <a href="#"
+              ><img src="https://via.placeholder.com/24" alt="Instagram"
+            /></a>
+            <a href="#"
+              ><img src="https://via.placeholder.com/24" alt="YouTube"
+            /></a>
+          </div>
+        </div>
+        <!-- Menu -->
+        <div>
+          <h3 class="font-bold mb-2">Menu</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#prodi" class="hover:text-blue-400">Program Studi</a>
+            </li>
+            <li>
+              <a href="#pendaftaran" class="hover:text-blue-400">Pendaftaran</a>
+            </li>
+            <li>
+              <a href="#beasiswa" class="hover:text-blue-400">Beasiswa</a>
+            </li>
+            <li><a href="#mitra" class="hover:text-blue-400">Mitra</a></li>
+          </ul>
+        </div>
+        <!-- Kontak -->
+        <div>
+          <h3 class="font-bold mb-2">Kontak</h3>
+          <p>📍 Jl. Sunggal, Gg Bakul No. 123, Kota Medan</p>
+          <p>📞 (021) 12345678</p>
+          <p>✉️ satyaterrabhinneka@satyaterrabhinneka.ac.id</p>
+        </div>
+      </div>
+      <div class="text-center mt-6 text-gray-400">
+        &copy; 2025 Universitas Satya Terra Bhinneka. All rights reserved.
+      </div>
+    </footer>
+    <script src="../../api/pages/homepage.js"></script>
+
+  </body>
+</html>

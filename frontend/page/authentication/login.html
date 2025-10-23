@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form PMB</title>
+    <link rel="stylesheet" href="aset/css/login.css"/>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+    <style>
+        .carousel-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            overflow: hidden;
+        }
+        
+        .carousel-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            transition: opacity 2s ease-in-out;
+            opacity: 0;
+        }
+        
+        .main-container {
+            position: relative;
+            z-index: 99;
+            transition: transform 0.3s ease-in-out;
+        }
+    </style>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const images = [
+                'aset/img/login/bg1.jpg',
+                'aset/img/login/bg2.jpg',
+                'aset/img/login/bg3.jpg',
+                'aset/img/login/bg4.jpg',
+                'aset/img/login/bg5.jpg'
+            ];
+            let currentIndex = 0;
+
+            // Preload all images
+            images.forEach(src => {
+                const img = new Image();
+                img.src = src;
+            });
+
+            // Create carousel container
+            const carouselContainer = document.createElement('div');
+            carouselContainer.className = 'carousel-container';
+            document.body.prepend(carouselContainer);
+
+            // Create two background layers for seamless crossfade
+            const bg1 = document.createElement('div');
+            const bg2 = document.createElement('div');
+            
+            bg1.className = 'carousel-bg';
+            bg2.className = 'carousel-bg';
+            
+            bg1.style.backgroundImage = `url('${images[0]}')`;
+            bg2.style.backgroundImage = `url('${images[1]}')`;
+            bg1.style.opacity = '1'; // Start with first image visible
+            bg2.style.opacity = '0';
+            
+            carouselContainer.appendChild(bg1);
+            carouselContainer.appendChild(bg2);
+
+            let isFirstLayer = true;
+
+            function crossfadeToNext() {
+                const nextIndex = (currentIndex + 1) % images.length;
+                
+                if (isFirstLayer) {
+                    // Set the new image on the hidden layer
+                    bg2.style.backgroundImage = `url('${images[nextIndex]}')`;
+                    
+                    // Start the crossfade
+                    bg1.style.opacity = '0';
+                    bg2.style.opacity = '1';
+                } else {
+                    // Set the new image on the hidden layer
+                    bg1.style.backgroundImage = `url('${images[nextIndex]}')`;
+                    
+                    // Start the crossfade
+                    bg2.style.opacity = '0';
+                    bg1.style.opacity = '1';
+                }
+                
+                currentIndex = nextIndex;
+                isFirstLayer = !isFirstLayer;
+            }            // Start crossfade every 3 seconds (longer interval for smoother experience)
+            setInterval(crossfadeToNext, 3500);
+        });
+    </script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'custom-green': '#205D33',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-4">
+    <div class="glass-container rounded-2xl shadow-xl p-8 w-full max-w-md main-container">
+        <div class="text-center mb-8">
+            <h2 class="text-3xl font-bold text-custom-green mb-2">Login PMB</h2>
+        </div>
+        
+        <form id="form-login" class="space-y-6" method="post">
+            <div>
+                <label class="block text-sm font-medium text-custom-green mb-2">Username</label>
+                <input type="text" id="username" name="username" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-green focus:border-custom-green transition-colors">
+            </div>
+            
+            <div>
+                <label class="block text-sm font-medium text-custom-green mb-2">Password</label>
+                <input type="password" id="password" name="password" required
+                       class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-custom-green focus:border-custom-green transition-colors">
+            </div>
+            
+            <button type="submit" 
+                    class="w-full bg-custom-green text-white py-3 px-6 rounded-lg font-semibold hover:bg-green-800 transition-colors duration-200 transform hover:scale-105">
+                Login
+            </button>
+        </form>
+        
+        <div class="mt-6 text-center">
+            <p class="text-sm text-gray-600">
+                <a href="#" class="text-custom-green hover:underline font-medium">Forgot Password?</a>
+            </p>
+        </div>
+        <div id="successMessage" class="hidden mt-4 p-4 bg-green-100 border border-green-400 text-green-700 rounded-lg text-center">
+            You Have Logged In Successfully!
+    </div>
+
+    <script>
+        document.getElementById('form-login').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message
+            document.getElementById('successMessage').classList.remove('hidden');
+            
+            // Hide success message after 3 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').classList.add('hidden');
+            }, 3000);
+        });
+    </script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'98476edb17ad5ff2',t:'MTc1ODc3MDkyMy4wMDAwMDA='};var a=document.createElement('script');a.nonce='';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+
+<script type="module" src="../../api/authentication/authentication.js"></script>
+
+</html>
