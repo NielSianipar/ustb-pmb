@@ -1,0 +1,73 @@
+        body {
+            box-sizing: border-box;
+        }
+
+        .page-content {
+            display: none;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        .fade-in {
+            animation: fadeIn 0.3s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .sidebar-item:hover {
+            background-color: rgba(99, 102, 241, 0.1);
+        }
+
+        .sidebar-item.active {
+            background-color: rgba(99, 102, 241, 0.1);
+            border-right: 3px solid #6366f1;
+        }
+
+        /* Glassmorphism effect for login container */
+        .glass-container {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(10px);
+            -webkit-backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Enhanced glass effect on hover */
+        .glass-container:hover {
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+        }
+
+        /* Make sure form elements are visible on glass background */
+        .glass-container input,
+        .glass-container label,
+        .glass-container button,
+        .glass-container p,
+        .glass-container h2 {
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Enhance input visibility on glass background */
+        .glass-container input {
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .glass-container input:focus {
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 0 0 2px rgba(32, 93, 51, 0.3);
+        }

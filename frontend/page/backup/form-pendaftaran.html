@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form PMB Step 1</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body class="bg-gradient-to-br from-blue-100 to-blue-300">
+    <div class="min-h-screen flex justify-center items-center p-6">
+      <div class="bg-white shadow-2xl rounded-2xl p-10 w-full max-w-3xl">
+        <!-- Judul -->
+        <h2 class="text-4xl font-bold text-center text-blue-700 mb-6">
+          Formulir Penerimaan Mahasiswa Baru (PMB)
+        </h2>
+
+        <!-- Progress Step -->
+        <div class="flex justify-between items-center mb-10">
+          <div class="flex-1 text-center">
+            <div
+              class="w-10 h-10 mx-auto rounded-full bg-blue-600 text-white flex items-center justify-center font-bold"
+            >
+              1
+            </div>
+            <p class="text-sm mt-2 text-blue-700 font-semibold">Data Pribadi</p>
+          </div>
+          <div class="flex-1 h-1 bg-blue-300"></div>
+          <div class="flex-1 text-center">
+            <div
+              class="w-10 h-10 mx-auto rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold"
+            >
+              2
+            </div>
+            <p class="text-sm mt-2 text-gray-500">Data Orang Tua</p>
+          </div>
+          <div class="flex-1 h-1 bg-gray-300"></div>
+          <div class="flex-1 text-center">
+            <div
+              class="w-10 h-10 mx-auto rounded-full bg-gray-300 text-gray-600 flex items-center justify-center font-bold"
+            >
+              3
+            </div>
+            <p class="text-sm mt-2 text-gray-500">Akademik</p>
+          </div>
+        </div>
+
+        <!-- Form Step 1 -->
+        <form
+          id="form-pendaftaran"
+          method="POST"
+          enctype="multipart/form-data"
+          class="space-y-6"
+        >
+          <fieldset
+            class="border border-gray-300 rounded-xl p-6 bg-gray-50"
+            id="step-1"
+          >
+            <legend class="text-xl font-semibold text-gray-700 px-2">
+              Data Pribadi
+            </legend>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mt-4">
+              <!-- NISN -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >NISN <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  name="nisn"
+                  id="nisn"
+                  placeholder="Masukkan NISN Anda"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- NIK -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >NIK <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  name="nik"
+                  id="nik"
+                  placeholder="Masukkan NIK Anda"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- Nama Lengkap -->
+              <div class="md:col-span-2">
+                <label class="block font-medium text-gray-700"
+                  >Nama Lengkap <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  name="nama_lengkap"
+                  id="nama_lengkap"
+                  placeholder="Masukkan Nama Lengkap"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- Tempat Lahir -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Tempat Lahir <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  name="tempat_lahir"
+                  id="tempat_lahir"
+                  placeholder="Masukkan Tempat Lahir"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- Tanggal Lahir -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Tanggal Lahir <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="date"
+                  name="tanggal_lahir"
+                  id="tanggal_lahir"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- Jenis Kelamin -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Jenis Kelamin <span class="text-red-500">*</span></label
+                >
+                <select
+                  name="jenis_kelamin"
+                  id="jenis_kelamin"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                >
+                  <option value="">-- Pilih --</option>
+                  <option value="L">Laki-Laki</option>
+                  <option value="P">Perempuan</option>
+                </select>
+              </div>
+
+              <!-- Agama -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Agama <span class="text-red-500">*</span></label
+                >
+                <select
+                  name="agama"
+                  id="agama"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                >
+                  <option value="">-- Pilih --</option>
+                  <option value="islam">Islam</option>
+                  <option value="kristen">Kristen</option>
+                  <option value="hindu">Hindu</option>
+                  <option value="katolik">Katolik</option>
+                  <option value="buddha">Buddha</option>
+                </select>
+              </div>
+
+              <div class="md:col-span-2">
+                <label for="hobby" class="block font-medium text-gray-700">
+                  Hobby <span class="text-red-500">*</span>
+                </label>
+                <select
+                  id="hobby"
+                  name="hobby"
+                  onchange="toggleOtherInput('hobby','hobby_lainnya')"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                >
+                  <option value="">-Pilih Hobby-</option>
+                  <option value="Membaca">Membaca</option>
+                  <option value="Olahraga">Olahraga</option>
+                  <option value="Musik">Musik</option>
+                  <option value="Menulis">Menulis</option>
+                  <option value="Game">Game</option>
+                  <option value="Traveling">Traveling</option>
+                  <option value="Fotografi">Fotografi</option>
+                  <option value="Lainnya">Lainnya</option>
+                </select>
+
+                <!-- input manual kalau pilih Lainnya -->
+                <input
+                  type="text"
+                  id="hobby_lainnya"
+                  name="hobby_lainnya"
+                  placeholder="Masukkan Hobby Anda"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 mt-2 focus:ring-2 focus:ring-blue-500 focus:outline-none hidden"
+                />
+              </div>
+
+              <!-- Alamat -->
+              <div class="md:col-span-2">
+                <label class="block font-medium text-gray-700"
+                  >Alamat <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  name="alamat"
+                  id="alamat"
+                  placeholder="Masukkan Alamat Lengkap"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- Provinsi -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Provinsi <span class="text-red-500">*</span></label
+                >
+                <select
+                  id="provinsi"
+                  name="provinsi"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                >
+                  <option value="">-- Pilih Provinsi --</option>
+                </select>
+              </div>
+
+              <!-- Kabupaten -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Kabupaten/Kota <span class="text-red-500">*</span></label
+                >
+                <select
+                  id="kabupaten"
+                  name="kabupaten"
+                  disabled
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                >
+                  <option value="">Pilih provinsi dulu</option>
+                </select>
+              </div>
+
+              <!-- Kecamatan -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Kecamatan <span class="text-red-500">*</span></label
+                >
+                <select
+                  id="kecamatan"
+                  name="kecamatan"
+                  disabled
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                >
+                  <option value="">Pilih provinsi dulu</option>
+                </select>
+              </div>
+
+              <!-- Kelurahan -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Kelurahan <span class="text-red-500">*</span></label
+                >
+                <select
+                  id="kelurahan"
+                  name="kelurahan"
+                  disabled
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                >
+                  <option value="">Pilih provinsi dulu</option>
+                </select>
+              </div>
+
+              <!-- Kode Pos -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Kode Pos <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  name="kode_pos"
+                  id="kode_pos"
+                  placeholder="Masukkan Kode Pos"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- No. HP -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >No. HP <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="text"
+                  name="nomor_hp"
+                  id="nomor_hp"
+                  placeholder="Contoh: 081234567890"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- Email -->
+              <div>
+                <label class="block font-medium text-gray-700"
+                  >Email <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="email"
+                  name="email"
+                  id="email"
+                  placeholder="Masukkan Email Aktif"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+
+              <!-- Pas Foto -->
+              <div class="md:col-span-2">
+                <label class="block font-medium text-gray-700"
+                  >Pas Foto (max 1MB jpg, jpeg, png)
+                  <span class="text-red-500">*</span></label
+                >
+                <input
+                  type="file"
+                  name="pas_foto"
+                  id="pas_foto"
+                  class="w-full border border-gray-300 rounded-lg px-4 py-2 bg-white focus:ring-2 focus:ring-blue-500 focus:outline-none"
+                  required
+                />
+              </div>
+            </div>
+          </fieldset>
+
+          <!-- Tombol Next -->
+          <div class="flex justify-end items-center mt-6">
+            <button
+              type="button"
+              class="flex items-center px-6 py-2 bg-blue-600 text-white font-medium rounded-lg shadow hover:bg-blue-700"
+            >
+              Submit
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script type="module" src="api/api_wilayah.js"></script>
+  <!-- <script type="module" src="js/regist.js"></script> -->
+  <script type="module" src="api/calon_mahasiswa_baru/tambah_calon_mahasiswa_baru.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/choices.js/public/assets/scripts/choices.min.js"></script>
+  </body>
+</html>

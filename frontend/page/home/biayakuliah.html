@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Biaya Kuliah - Universitas Satya Terra Bhinneka</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Nunito', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="font-nunito text-gray-800">
+  <!-- Header  -->
+  <header class="bg-white shadow fixed w-full top-0 z-50 font-bold">
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="/aset/background/logostb.png" alt="Logo" class="h-10" />
+        </div>
+
+        <!-- Menu (Desktop) -->
+        <nav class="hidden md:flex text-xs space-x-14">
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="index"
+            >Home</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="pendaftaran"
+            >Info Pendaftaran</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="akreditasi"
+            >Akreditasi</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="biayakuliah"
+            >Biaya Kuliah</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="sarana"
+            >Sarana & Prasara</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="kegiatan-mahasiswa"
+            >Kegiatan Mahasiswa</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="faq"
+            >FAQ</a
+          >
+        </nav>
+        <!-- Button -->
+        <a
+          class="daftar hidden md:block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+        >
+          Pendaftaran
+        </a>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          <!-- icon hamburger -->
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="infopendaftaran.html" class="hover:text-blue-600"
+            >Info Pendaftaran</a
+          >
+          <a href="akreditasi.html" class="hover:text-blue-600">Akreditasi</a>
+          <a href="biayakuliah.html" class="hover:text-blue-600"
+            >Biaya Kuliah</a
+          >
+          <a href="sarana.html" class="hover:text-blue-600">Sarana & Prasara</a>
+          <a href="kegiatanmahasiswa.html" class="hover:text-blue-600"
+            >Kegiatan Mahasiswa</a
+          >
+          <a href="faq.html" class="hover:text-blue-600">FAQ</a>
+
+          <a
+            class="daftar inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition"
+          >
+            Pendaftaran
+          </a>
+        </nav>
+      </div>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-white"
+    style="background-image: url('aset/background/kampus.jpg')">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative text-center">
+      <h1 class="text-4xl md:text-6xl font-bold">Biaya Kuliah</h1>
+      <p class="mt-4 text-lg md:text-xl max-w-2xl mx-auto">
+        Informasi lengkap mengenai biaya pendidikan di Universitas Satya Terra
+        Bhinneka.
+      </p>
+    </div>
+  </section>
+
+  <!-- Biaya Kuliah Section -->
+  <section class="max-w-7xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">Tabel Biaya Kuliah</h2>
+
+    <div class="overflow-x-auto">
+      <table class="w-full border border-gray-300 text-left shadow-md rounded-lg overflow-hidden">
+        <thead class="bg-blue-900 text-white">
+          <tr>
+            <th class="px-6 py-3">Fakultas</th>
+            <th class="px-6 py-3">Program Studi</th>
+            <th class="px-6 py-3">Biaya Pendaftaran</th>
+            <th class="px-6 py-3">SPP per Semester</th>
+            <th class="px-6 py-3">Total Tahun Pertama</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr class="border-t hover:bg-gray-50">
+            <td class="px-6 py-3">Fakultas Teknologi dan Ilmu Komputer</td>
+            <td class="px-6 py-3">S1 Informatika</td>
+            <td class="px-6 py-3">Rp 500.000</td>
+            <td class="px-6 py-3">Rp 6.000.000</td>
+            <td class="px-6 py-3">Rp 6.500.000</td>
+          </tr>
+          <tr class="border-t hover:bg-gray-50">
+            <td class="px-6 py-3">Fakultas Ekonomi dan Bisnis</td>
+            <td class="px-6 py-3">S1 Bisnis Digital</td>
+            <td class="px-6 py-3">Rp 500.000</td>
+            <td class="px-6 py-3">Rp 6.000.000</td>
+            <td class="px-6 py-3">Rp 6.500.000</td>
+          </tr>
+          <tr class="border-t hover:bg-gray-50">
+            <td class="px-6 py-3">Fakultas Ekonomi dan Bisnis</td>
+            <td class="px-6 py-3">S1 Kewirausahaan</td>
+            <td class="px-6 py-3">Rp 500.000</td>
+            <td class="px-6 py-3">Rp 6.000.000</td>
+            <td class="px-6 py-3">Rp 6.500.000</td>
+          </tr>
+          <tr class="border-t hover:bg-gray-50">
+            <td class="px-6 py-3">Fakultas Pertanian dan Kehutanan</td>
+            <td class="px-6 py-3">S1 Manajemen Hutan</td>
+            <td class="px-6 py-3">Rp 500.000</td>
+            <td class="px-6 py-3">Rp 5.500.000</td>
+            <td class="px-6 py-3">Rp 6.000.000</td>
+          </tr>
+          <tr class="border-t hover:bg-gray-50">
+            <td class="px-6 py-3">Fakultas Pertanian dan Kehutanan</td>
+            <td class="px-6 py-3">S1 Agribisnis</td>
+            <td class="px-6 py-3">Rp 500.000</td>
+            <td class="px-6 py-3">Rp 6.500.000</td>
+            <td class="px-6 py-3">Rp 7.000.000</td>
+          </tr>
+          <tr class="border-t hover:bg-gray-50">
+            <td class="px-6 py-3">Fakultas Kesehatan</td>
+            <td class="px-6 py-3">D3 Kebidanan</td>
+            <td class="px-6 py-3">Rp 500.000</td>
+            <td class="px-6 py-3">Rp 5.000.000</td>
+            <td class="px-6 py-3">Rp 5.500.000</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- Alur Pembayaran Section -->
+  <section class="bg-gray-50 py-16">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl font-bold text-center mb-12">Alur Pembayaran</h2>
+
+      <div class="space-y-8">
+        <!-- Step 1 -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-blue-900 text-white flex items-center justify-center rounded-full font-bold">
+            1
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">
+              Registrasi & Mendapatkan Nomor Virtual Account
+            </h3>
+            <p class="text-gray-600">
+              Mahasiswa baru mendaftar dan mendapatkan nomor VA untuk
+              pembayaran biaya kuliah.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-blue-900 text-white flex items-center justify-center rounded-full font-bold">
+            2
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Melakukan Pembayaran</h3>
+            <p class="text-gray-600">
+              Pembayaran dapat dilakukan melalui ATM, mobile banking, atau
+              teller bank yang bekerja sama.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-blue-900 text-white flex items-center justify-center rounded-full font-bold">
+            3
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">Konfirmasi Otomatis</h3>
+            <p class="text-gray-600">
+              Setelah pembayaran berhasil, sistem akan otomatis melakukan
+              verifikasi.
+            </p>
+          </div>
+        </div>
+
+        <!-- Step 4 -->
+        <div class="flex items-start gap-4">
+          <div class="w-12 h-12 bg-blue-900 text-white flex items-center justify-center rounded-full font-bold">
+            4
+          </div>
+          <div>
+            <h3 class="text-xl font-semibold">
+              Cetak Bukti & Resmi Terdaftar
+            </h3>
+            <p class="text-gray-600">
+              Mahasiswa dapat mencetak bukti pembayaran sebagai tanda resmi
+              telah terdaftar.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+
+  <!-- FAQ Section -->
+  <section class="py-20 bg-gradient-to-b from-blue-50 to-white">
+    <div class="max-w-5xl mx-auto px-6">
+      <h2 class="text-3xl md:text-4xl font-bold text-center text-blue-800 mb-14">
+        Pertanyaan yang Sering Diajukan
+      </h2>
+
+      <div class="space-y-4">
+        <!-- FAQ Item -->
+        <div class="border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+          <button
+            class="w-full flex justify-between items-center px-6 py-4 bg-white hover:bg-blue-50 transition text-left"
+            onclick="toggleFAQ(this)">
+            <span class="font-semibold text-gray-800">
+              Apakah biaya kuliah bisa dicicil?
+            </span>
+            <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="px-6 pb-4 text-gray-600 hidden">
+            Ya, Universitas Satya Terra Bhinneka menyediakan opsi pembayaran
+            cicilan per bulan atau per tahap sesuai dengan kebijakan kampus.
+          </div>
+        </div>
+
+        <!-- FAQ Item -->
+        <div class="border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+          <button
+            class="w-full flex justify-between items-center px-6 py-4 bg-white hover:bg-blue-50 transition text-left"
+            onclick="toggleFAQ(this)">
+            <span class="font-semibold text-gray-800">
+              Bagaimana jika terlambat membayar biaya kuliah?
+            </span>
+            <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="px-6 pb-4 text-gray-600 hidden">
+            Mahasiswa yang terlambat membayar akan dikenakan denda
+            administrasi sesuai peraturan yang berlaku. Disarankan untuk
+            melakukan pembayaran sebelum jatuh tempo.
+          </div>
+        </div>
+
+        <!-- FAQ Item -->
+        <div class="border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+          <button
+            class="w-full flex justify-between items-center px-6 py-4 bg-white hover:bg-blue-50 transition text-left"
+            onclick="toggleFAQ(this)">
+            <span class="font-semibold text-gray-800">
+              Apakah ada beasiswa yang tersedia?
+            </span>
+            <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="px-6 pb-4 text-gray-600 hidden">
+            Tentu! Kampus menyediakan berbagai jenis beasiswa, termasuk KIP
+            Kuliah, beasiswa prestasi akademik, dan bantuan khusus mahasiswa.
+          </div>
+        </div>
+
+        <!-- FAQ Item -->
+        <div class="border border-gray-200 rounded-xl shadow-sm overflow-hidden">
+          <button
+            class="w-full flex justify-between items-center px-6 py-4 bg-white hover:bg-blue-50 transition text-left"
+            onclick="toggleFAQ(this)">
+            <span class="font-semibold text-gray-800">
+              Apakah biaya kuliah sama untuk semua program studi?
+            </span>
+            <svg class="w-6 h-6 text-blue-600 transition-transform duration-300" fill="none" stroke="currentColor"
+              stroke-width="2" viewBox="0 0 24 24">
+              <path d="M19 9l-7 7-7-7" />
+            </svg>
+          </button>
+          <div class="px-6 pb-4 text-gray-600 hidden">
+            Tidak, biaya kuliah berbeda untuk setiap fakultas dan program
+            studi. Silakan cek tabel biaya kuliah di atas untuk detail lebih
+            lengkap.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <script>
+    function toggleFAQ(button) {
+      const content = button.nextElementSibling;
+      const icon = button.querySelector("svg");
+
+      // Tutup semua FAQ lain dulu
+      document
+        .querySelectorAll("section .space-y-4 div div")
+        .forEach((div) => {
+          if (div !== content) div.classList.add("hidden");
+        });
+      document.querySelectorAll("section .space-y-4 svg").forEach((svg) => {
+        if (svg !== icon) svg.classList.remove("rotate-180");
+      });
+
+      // Toggle yang diklik
+      content.classList.toggle("hidden");
+      icon.classList.toggle("rotate-180");
+    }
+  </script>
+
+  <footer class="bg-emerald-800 text-white py-8">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-4">
+      <!-- Deskripsi -->
+      <div>
+        <img src="../../aset/background/logostb.png" alt="Logo Universitas Satya Terra Bhinneka" class="max-w-xl" />
+
+        <p>
+          Menjadi bagian dari Universitas Satya Terra Bhinneka, kampus yang
+          berkomitmen mencetak generasi bangsa unggul, kreatif, serta
+          berakhlak mulia.
+        </p>
+
+      </div>
+      <!-- Menu -->
+      <div class="ml-20">
+        <h3 class="font-bold mb-2">Menu</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="#prodi" class="hover:text-blue-400">Program Studi</a>
+          </li>
+          <li>
+            <a href="#pendaftaran" class="hover:text-blue-400">Pendaftaran</a>
+          </li>
+          <li>
+            <a href="#beasiswa" class="hover:text-blue-400">Beasiswa</a>
+          </li>
+          <li><a href="#mitra" class="hover:text-blue-400">Mitra</a></li>
+        </ul>
+      </div>
+      <!-- Menu -->
+      <div>
+        <h3 class="font-bold mb-2">Fakultas</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://ftik.satyaterrabhinneka.ac.id/" class="hover:text-blue-400">FTIK</a>
+          </li>
+          <li>
+            <a href="https://feb.satyaterrabhinneka.ac.id/" class="hover:text-blue-400">FEB</a>
+          </li>
+          <li>
+            <a href="https://fpkh.satyaterrabhinneka.ac.id/" class="hover:text-blue-400">FPKH</a>
+          </li>
+          <li>
+            <a href="https://fkes.satyaterrabhinneka.ac.id/" class="hover:text-blue-400">FKES</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Kontak -->
+      <div>
+        <h3 class="font-bold mb-2">Kontak</h3>
+        <p>📍 Jl. Sunggal, Gg Bakul No. 123, Kota Medan</p>
+        <p>📞 (021) 12345678</p>
+        <p>✉️ satyaterrabhinneka@satyaterrabhinneka.ac.id</p>
+      </div>
+    </div>
+    <div class="text-center mt-6 text-gray-400">
+      &copy; 2025 Universitas Satya Terra Bhinneka. All rights reserved.
+    </div>
+
+     <button
+      id="scrollToTopBtn"
+      class="fixed bottom-6 right-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 opacity-0 translate-y-10 z-50"
+      aria-label="Scroll to top"
+    >
+      <!-- Ikon panah -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
+  </footer>
+
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Deteksi posisi scroll
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 200) {
+            scrollToTopBtn.classList.remove("opacity-0", "translate-y-10");
+            scrollToTopBtn.classList.add("opacity-100", "translate-y-0");
+          } else {
+            scrollToTopBtn.classList.add("opacity-0", "translate-y-10");
+            scrollToTopBtn.classList.remove("opacity-100", "translate-y-0");
+          }
+        });
+
+        // Scroll ke atas dengan halus
+        scrollToTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
+
+
+  <script>
+    // JS untuk toggle menu mobile
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+   <script src="../api/pages/form.js"></script>
+   <script src="../api/pages/homepage.js"></script>
+
+</body>
+
+</html>

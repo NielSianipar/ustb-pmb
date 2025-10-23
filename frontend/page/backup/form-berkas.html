@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <link rel="stylesheet" href="../../aset/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- #NOTE buat preview berkas -->
+  <div class="container">
+<form action="" id="form-berkas" enctype="multipart/form-data" method="POST">
+  <fieldset>
+        <legend>Upload Berkas Pendukung</legend>
+        <label>Ijazah / SKL:</label>
+        <input type="file" name="ijazah" id="ijazah" accept=".pdf,.jpg, .jpeg, .png">
+        <label>KK:</label>
+        <input type="file" name="kk" id="kk" accept=".pdf,.jpg, .jpeg, .png">
+        <label>KTP:</label>
+        <input type="file" name="ktp" id="ktp" accept=".pdf,.jpg, .jpeg, .png">
+        <label>Sertifikat (Opsional):</label>
+        <input type="file" name="sertifikat" id="sertifikat" accept=".pdf,.jpg,.jpeg, .png">
+      </fieldset>        
+    <button type="submit">Submit</button>
+    </form>
+      </div>
+        <script type="module" src="../api/calon_mahasiswa_baru/tambah_data_berkas_calon_mahasiswa.js"></script>
+
+      </body>
+      </html>

@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unit Kegiatan Mahasiswa - PMB Universitas</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        font-family: "Nunito", sans-serif;
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800 font-nunito">
+    <header class="bg-white shadow fixed w-full top-0 z-50 font-bold">
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="/aset/background/logostb.png" alt="Logo" class="h-10" />
+        </div>
+
+        <!-- Menu (Desktop) -->
+        <nav class="hidden md:flex text-xs space-x-14">
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="index"
+            >Home</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="pendaftaran"
+            >Info Pendaftaran</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="akreditasi"
+            >Akreditasi</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="biayakuliah"
+            >Biaya Kuliah</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="sarana"
+            >Sarana & Prasara</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="kegiatan-mahasiswa"
+            >Kegiatan Mahasiswa</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="faq"
+            >FAQ</a
+          >
+        </nav>
+        <!-- Button -->
+        <a
+          class="daftar hidden md:block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+        >
+          Pendaftaran
+        </a>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          <!-- icon hamburger -->
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="infopendaftaran.html" class="hover:text-blue-600"
+            >Info Pendaftaran</a
+          >
+          <a href="akreditasi.html" class="hover:text-blue-600">Akreditasi</a>
+          <a href="biayakuliah.html" class="hover:text-blue-600"
+            >Biaya Kuliah</a
+          >
+          <a href="sarana.html" class="hover:text-blue-600">Sarana & Prasara</a>
+          <a href="kegiatanmahasiswa.html" class="hover:text-blue-600"
+            >Kegiatan Mahasiswa</a
+          >
+          <a href="faq.html" class="hover:text-blue-600">FAQ</a>
+
+          <a
+            class="daftar inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition"
+          >
+            Pendaftaran
+          </a>
+        </nav>
+      </div>
+    </header>
+    <!-- Hero Section -->
+    <section
+      class="relative bg-cover bg-center h-[50vh] flex items-center justify-center text-white"
+      style="background-image: url('aset/background/kampus.jpg')"
+    >
+      <div class="absolute inset-0 bg-black/60"></div>
+      <div class="relative text-center">
+        <h1 class="text-4xl md:text-5xl font-bold">UNIT KEGIATAN MAHASISWA</h1>
+      </div>
+    </section>
+
+    <!-- Content -->
+    <div class="container mx-auto px-6 md:px-12 py-12">
+      <p class="text-center text-lg text-gray-600 mb-10 max-w-3xl mx-auto">
+        Universitas Satya Terra Bhinneka menyediakan berbagai Unit Kegiatan
+        Mahasiswa (UKM) untuk mendukung pengembangan minat, bakat, dan potensi
+        mahasiswa. Berikut daftar UKM yang dapat kamu ikuti:
+      </p>
+
+      <!-- Grid UKM -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card UKM -->
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Chess Club.jpg"
+            alt="UKM Musik"
+            class="flex justify-center h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Chess Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Wadah mahasiswa pecinta catur untuk berlatih, berkompetisi, dan
+              mengembangkan strategi permainan.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM E-Sport.jpg"
+            alt="UPM E-Sport"
+            class="justify-center h-40 mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM E-Sport
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Wadah mahasiswa pecinta game untuk berlatih, berkompetisi, dan
+              mengembangkan strategi permainan.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/Suara Bhinneka Club.jpg"
+            alt="UPM Suara Bhinneka"
+            class="h-40 mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Suara Bhinneka
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Wadah mahasiswa pecinta musik untuk berlatih, berkolaborasi, dan
+              mengembangkan kreativitas.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Basketball Club.webp"
+            alt="UKM Basketball"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Basketball Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Wadah mahasiswa pecinta basket untuk berlatih, berkompetisi, dan
+              mengembangkan strategi permainan.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM English Club.jpg"
+            alt="UKM English Club"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM English Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Wadah mahasiswa yang tertarik untuk meningkatkan kemampuan
+              berbahasa Inggris melalui diskusi, debat, dan kegiatan bahasa
+              lainnya.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Badminton.jpg"
+            alt="UKM Badminton"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Badminton Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mengasah jiwa petualang, kepedulian lingkungan, dan solidaritas
+              melalui kegiatan alam bebas.
+            </p>
+          </div>
+        </div>
+
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Choir Club.jpg"
+            alt="UPM Choir Club"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Choir Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Menyalurkan bakat dan minat di bidang musik melalui paduan suara.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/HIMA Agribisnis.jpg"
+            alt="UPM HIMA Agribisnis"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM HIMA Agribisnis
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia agribisnis, pertanian, dan pengelolaan sumber daya
+              alam.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/HIMA Bisnis Digital.jpg"
+            alt="UPM HIMA Bisnis Digital"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM HIMA Bisnis Digital
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mempersiapkan generasi wirausaha digital yang inovatif.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/HIMA FOIS.png"
+            alt="UPM HIMA FOIS"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM HIMA FOIS
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Meningkatkan pengetahuan dan keterampilan di bidang teknologi
+              informasi dan sistem.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/HIMA Kebidanan.jpg"
+            alt="UPM HIMA Kebidanan"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM HIMA Kebidanan
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia kebidanan, kesehatan reproduksi, dan perawatan ibu
+              serta anak.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/HIMA Kewirausahawan.png"
+            alt="UPM HIMA Kewirausahawan"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM HIMA Kewirausahawan
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia kewirausahaan, inovasi, dan pengembangan bisnis.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/HIMA Manajamen Hutan.jpg"
+            alt="UPM HIMA Manajamen Hutan"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM HIMA Manajamen Hutan
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia manajemen hutan, konservasi, dan pemanfaatan
+              sumber daya alam.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Athletics Club.png"
+            alt="UPM Athletics Club"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Athletics Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia olahraga, kebugaran, dan pengembangan diri
+              mahasiswa.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Badminton.jpg"
+            alt="UPM Badminton"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Badminton Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia bulu tangkis, teknik permainan, dan pengembangan
+              atletik.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Capital Invesment.jpg"
+            alt="UPM Capital Investment"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Capital Investment
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia investasi, analisis pasar, dan pengelolaan
+              keuangan.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Computer Club.png"
+            alt="UPM Computer Club"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Computer Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia komputer, pemrograman, dan teknologi informasi.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Green Generation.jpg"
+            alt="UPM Green Generation"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Green Generation
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia kepenulisan, pers mahasiswa, serta pengelolaan
+              media kampus.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Interfaith Hindu.jpg"
+            alt="UPM Interfaith Hindu"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Interfaith Hindu
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia lintas agama, dialog antariman, dan toleransi.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Interfaith Islam.jpeg"
+            alt="UPM Interfaith Islam"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Interfaith Islam
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia lintas agama, dialog antariman, dan toleransi.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Interfaith Kristen Katolik.jpg"
+            alt="UPM Interfaith Kristen Katolik"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Interfaith Kristen Katolik
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia lintas agama, dialog antariman, dan toleransi.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Interfaith Kristen Protestan.png"
+            alt="UPM Interfaith Kristen Protestan"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Interfaith Kristen Protestan
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia lintas agama, dialog antariman, dan toleransi.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Klub Sastra.jpg"
+            alt="UPM Klub Sastra"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Klub Sastra
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Menggali karya sastra, diskusi buku, dan pengembangan kreativitas.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Modern Dance.png"
+            alt="UPM Modern Dance"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Modern Dance
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Menyelami gerakan, ekspresi, dan kolaborasi dalam seni tari
+              kontemporer.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM PAMAS.png"
+            alt="UPM PAMAS"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM PAMAS
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia kepenulisan, pers mahasiswa, serta pengelolaan
+              media kampus.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Red Cross.jpg"
+            alt="UPM Red Cross"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Red Cross
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Menggali isu-isu kemanusiaan, pertolongan pertama, dan pengabdian
+              masyarakat.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Tradisional Dance Club.png"
+            alt="UPM Tradisional Dance Club"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Tradisional Dance Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Menyelami gerakan, ekspresi, dan kolaborasi dalam seni tari
+              tradisional.
+            </p>
+          </div>
+        </div>
+        <div
+          class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300"
+        >
+          <img
+            src="aset/upm/UPM Vocal Club.jpg"
+            alt="UPM Vocal Club"
+            class="w-xl h-40 object-cover mx-auto"
+          />
+          <div class="p-6">
+            <h3 class="text-xl font-semibold text-emerald-700 mb-2">
+              UPM Vocal Club
+            </h3>
+            <p class="text-gray-600 text-sm mb-4">
+              Mendalami dunia vokal, teknik bernyanyi, dan penampilan panggung.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-emerald-800 text-white py-8">
+      <div class="container mx-auto px-6 grid md:grid-cols-4 gap-4">
+        <!-- Deskripsi -->
+        <div>
+          <img
+            src="aset/background/logostb.png"
+            alt="Logo Universitas Satya Terra Bhinneka"
+            class="max-w-xl"
+          />
+
+          <p>
+            Menjadi bagian dari Universitas Satya Terra Bhinneka, kampus yang
+            berkomitmen mencetak generasi bangsa unggul, kreatif, serta
+            berakhlak mulia.
+          </p>
+        </div>
+        <!-- Menu -->
+        <div class="ml-20">
+          <h3 class="font-bold mb-2">Menu</h3>
+          <ul class="space-y-2">
+            <li>
+              <a href="#prodi" class="hover:text-blue-400">Program Studi</a>
+            </li>
+            <li>
+              <a href="#pendaftaran" class="hover:text-blue-400">Pendaftaran</a>
+            </li>
+            <li>
+              <a href="#beasiswa" class="hover:text-blue-400">Beasiswa</a>
+            </li>
+            <li><a href="#mitra" class="hover:text-blue-400">Mitra</a></li>
+          </ul>
+        </div>
+        <!-- Menu -->
+        <div>
+          <h3 class="font-bold mb-2">Fakultas</h3>
+          <ul class="space-y-2">
+            <li>
+              <a
+                href="https://ftik.satyaterrabhinneka.ac.id/"
+                class="hover:text-blue-400"
+                >FTIK</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://feb.satyaterrabhinneka.ac.id/"
+                class="hover:text-blue-400"
+                >FEB</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://fpkh.satyaterrabhinneka.ac.id/"
+                class="hover:text-blue-400"
+                >FPKH</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://fkes.satyaterrabhinneka.ac.id/"
+                class="hover:text-blue-400"
+                >FKES</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- Kontak -->
+        <div>
+          <h3 class="font-bold mb-2">Kontak</h3>
+          <p>📍 Jl. Sunggal, Gg Bakul No. 123, Kota Medan</p>
+          <p>📞 (021) 12345678</p>
+          <p>✉️ satyaterrabhinneka@satyaterrabhinneka.ac.id</p>
+        </div>
+      </div>
+      <div class="text-center mt-6 text-gray-400">
+        &copy; 2025 Universitas Satya Terra Bhinneka. All rights reserved.
+      </div>
+
+      <button
+        id="scrollToTopBtn"
+        class="fixed bottom-6 right-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 opacity-0 translate-y-10 z-50"
+        aria-label="Scroll to top"
+      >
+        <!-- Ikon panah -->
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-6 w-6"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+          stroke-width="2"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M5 15l7-7 7 7"
+          />
+        </svg>
+      </button>
+    </footer>
+
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Deteksi posisi scroll
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 200) {
+            scrollToTopBtn.classList.remove("opacity-0", "translate-y-10");
+            scrollToTopBtn.classList.add("opacity-100", "translate-y-0");
+          } else {
+            scrollToTopBtn.classList.add("opacity-0", "translate-y-10");
+            scrollToTopBtn.classList.remove("opacity-100", "translate-y-0");
+          }
+        });
+
+        // Scroll ke atas dengan halus
+        scrollToTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
+
+    <script>
+      // JS untuk toggle menu mobile
+      const menuBtn = document.getElementById("menu-btn");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    </script>
+    <script src="../api/pages/form.js"></script>
+    <script src="../api/pages/homepage.js"></script>
+  </body>
+</html>

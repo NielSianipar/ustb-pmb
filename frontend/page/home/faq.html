@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FAQ - PMB Universitas Satya Terra Bhinneka</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: "Nunito", sans-serif;
+    }
+  </style>
+</head>
+
+<body class="font-nunito bg-gray-50 text-gray-800">
+  <!-- Navabar -->
+  <header class="bg-white shadow fixed w-full top-0 z-50 font-bold">
+      <div
+        class="container mx-auto flex justify-between items-center py-4 px-6"
+      >
+        <!-- Logo -->
+        <div class="flex items-center space-x-2">
+          <img src="/aset/background/logostb.png" alt="Logo" class="h-10" />
+        </div>
+
+        <!-- Menu (Desktop) -->
+        <nav class="hidden md:flex text-xs space-x-14">
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="index"
+            >Home</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="pendaftaran"
+            >Info Pendaftaran</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="akreditasi"
+            >Akreditasi</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="biayakuliah"
+            >Biaya Kuliah</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="sarana"
+            >Sarana & Prasara</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="kegiatan-mahasiswa"
+            >Kegiatan Mahasiswa</a
+          >
+          <a
+            class="hover:text-blue-600 border-b-2 border-transparent hover:border-blue-600 transition cursor-pointer"
+            id="faq"
+            >FAQ</a
+          >
+        </nav>
+        <!-- Button -->
+        <a
+          class="daftar hidden md:block bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700"
+        >
+          Pendaftaran
+        </a>
+
+        <!-- Hamburger Button (Mobile) -->
+        <button
+          id="menu-btn"
+          class="md:hidden text-gray-700 focus:outline-none"
+        >
+          <!-- icon hamburger -->
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg">
+        <nav class="flex flex-col space-y-4 px-6 py-4">
+          <a href="index.html" class="hover:text-blue-600">Home</a>
+          <a href="infopendaftaran.html" class="hover:text-blue-600"
+            >Info Pendaftaran</a
+          >
+          <a href="akreditasi.html" class="hover:text-blue-600">Akreditasi</a>
+          <a href="biayakuliah.html" class="hover:text-blue-600"
+            >Biaya Kuliah</a
+          >
+          <a href="sarana.html" class="hover:text-blue-600">Sarana & Prasara</a>
+          <a href="kegiatanmahasiswa.html" class="hover:text-blue-600"
+            >Kegiatan Mahasiswa</a
+          >
+          <a href="faq.html" class="hover:text-blue-600">FAQ</a>
+
+          <a
+            class="daftar inline-block bg-green-600 text-white px-6 py-3 rounded-lg font-semibold shadow hover:bg-green-700 transition"
+          >
+            Pendaftaran
+          </a>
+        </nav>
+      </div>
+    </header>
+
+  <!-- Hero Section -->
+  <section class="relative bg-cover bg-center h-80" style="background-image: url('aset/background/kampus.jpg')">
+    <div class="absolute inset-0 bg-black/60"></div>
+    <div class="relative h-full flex flex-col items-center justify-center text-center text-white px-6">
+      <h1 class="text-4xl md:text-5xl font-bold mb-4">
+        Frequently Asked Questions ❓
+      </h1>
+      <p class="max-w-2xl text-lg text-gray-200">
+        Temukan jawaban dari pertanyaan yang sering diajukan oleh calon
+        mahasiswa baru Universitas Satya Terra Bhinneka.
+      </p>
+    </div>
+  </section>
+
+  <!-- FAQ Section -->
+  <section class="max-w-5xl mx-auto px-6 py-16">
+    <h2 class="text-3xl font-bold text-center mb-12">
+      Pertanyaan yang Sering Diajukan
+    </h2>
+
+    <div class="grid md:grid-cols-2 gap-6">
+      <!-- Kategori 1 -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-blue-700">Pendaftaran</h3>
+        <div class="space-y-4">
+          <div class="border rounded-lg shadow bg-white">
+            <button class="flex justify-between w-full px-6 py-4 text-left font-semibold text-lg toggle-faq">
+              Bagaimana cara mendaftar?
+              <span class="icon">+</span>
+            </button>
+            <div class="hidden px-6 pb-4 text-gray-600">
+              Anda bisa mendaftar secara online melalui website PMB atau
+              datang langsung ke kampus.
+            </div>
+          </div>
+          <div class="border rounded-lg shadow bg-white">
+            <button class="flex justify-between w-full px-6 py-4 text-left font-semibold text-lg toggle-faq">
+              Apa saja jalur penerimaan mahasiswa baru?
+              <span class="icon">+</span>
+            </button>
+            <div class="hidden px-6 pb-4 text-gray-600">
+              Tersedia jalur reguler, jalur prestasi, jalur KIP Kuliah, dan
+              jalur beasiswa khusus.
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Kategori 2 -->
+      <div>
+        <h3 class="text-xl font-semibold mb-4 text-blue-700">
+          Biaya & Beasiswa
+        </h3>
+        <div class="space-y-4">
+          <div class="border rounded-lg shadow bg-white">
+            <button class="flex justify-between w-full px-6 py-4 text-left font-semibold text-lg toggle-faq">
+              Bagaimana sistem pembayaran kuliah?
+              <span class="icon">+</span>
+            </button>
+            <div class="hidden px-6 pb-4 text-gray-600">
+              Pembayaran bisa dilakukan melalui transfer bank, virtual
+              account, atau langsung ke bagian keuangan kampus.
+            </div>
+          </div>
+          <div class="border rounded-lg shadow bg-white">
+            <button class="flex justify-between w-full px-6 py-4 text-left font-semibold text-lg toggle-faq">
+              Apakah tersedia beasiswa?
+              <span class="icon">+</span>
+            </button>
+            <div class="hidden px-6 pb-4 text-gray-600">
+              Ya, tersedia beasiswa akademik, non-akademik, KIP Kuliah, dan
+              kerjasama mitra.
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Kategori 3 -->
+    <div class="mt-12">
+      <h3 class="text-xl font-semibold mb-4 text-blue-700">Lainnya</h3>
+      <div class="space-y-4">
+        <div class="border rounded-lg shadow bg-white">
+          <button class="flex justify-between w-full px-6 py-4 text-left font-semibold text-lg toggle-faq">
+            Apakah ada asrama untuk mahasiswa?
+            <span class="icon">+</span>
+          </button>
+          <div class="hidden px-6 pb-4 text-gray-600">
+            Kampus menyediakan asrama dengan fasilitas lengkap untuk mahasiswa
+            baru.
+          </div>
+        </div>
+        <div class="border rounded-lg shadow bg-white">
+          <button class="flex justify-between w-full px-6 py-4 text-left font-semibold text-lg toggle-faq">
+            Bagaimana prospek lulusan Universitas Satya Terra Bhinneka?
+            <span class="icon">+</span>
+          </button>
+          <div class="hidden px-6 pb-4 text-gray-600">
+            Lulusan banyak diterima di perusahaan nasional dan multinasional,
+            serta berpeluang menjadi entrepreneur sukses.
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Form Pertanyaan -->
+  <section class="bg-gray-100 py-16">
+    <div class="max-w-3xl mx-auto px-6 text-center">
+      <h2 class="text-2xl font-bold mb-6">
+        Belum menemukan jawaban? Kirim pertanyaanmu!
+      </h2>
+      <form class="space-y-4">
+        <input type="text" placeholder="Nama Lengkap" class="w-full p-3 border rounded-lg" required />
+        <input type="email" placeholder="Email" class="w-full p-3 border rounded-lg" required />
+        <textarea placeholder="Tuliskan pertanyaanmu..." class="w-full p-3 border rounded-lg h-32" required></textarea>
+        <button type="submit"
+          class="bg-blue-700 text-white font-semibold px-6 py-3 rounded-lg shadow hover:bg-blue-800 transition">
+          Kirim Pertanyaan
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Floating WhatsApp Button -->
+  <a href="https://wa.me/6281234567890" target="_blank"
+    class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-lg hover:bg-green-600 transition flex items-center justify-center">
+    💬WhatsApp
+  </a>
+
+  <!-- footer -->
+  <footer class="bg-emerald-800 text-white py-8">
+    <div class="container mx-auto px-6 grid md:grid-cols-4 gap-4">
+      <!-- Deskripsi -->
+      <div>
+        <img src="aset/background/logostb.png" alt="Logo Universitas Satya Terra Bhinneka" class="max-w-xl" />
+
+        <p>
+          Menjadi bagian dari Universitas Satya Terra Bhinneka, kampus yang
+          berkomitmen mencetak generasi bangsa unggul, kreatif, serta
+          berakhlak mulia.
+        </p>
+      </div>
+      <!-- Menu -->
+      <div class="ml-20">
+        <h3 class="font-bold mb-2">Menu</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="#prodi" class="hover:text-blue-400">Program Studi</a>
+          </li>
+          <li>
+            <a href="#pendaftaran" class="hover:text-blue-400">Pendaftaran</a>
+          </li>
+          <li>
+            <a href="#beasiswa" class="hover:text-blue-400">Beasiswa</a>
+          </li>
+          <li><a href="#mitra" class="hover:text-blue-400">Mitra</a></li>
+        </ul>
+      </div>
+      <!-- Menu -->
+      <div>
+        <h3 class="font-bold mb-2">Fakultas</h3>
+        <ul class="space-y-2">
+          <li>
+            <a href="https://ftik.satyaterrabhinneka.ac.id/" class="hover:text-blue-400">FTIK</a>
+          </li>
+          <li>
+            <a href="https://feb.satyaterrabhinneka.ac.id/" class="hover:text-blue-400">FEB</a>
+          </li>
+          <li>
+            <a href="https://fpkh.satyaterrabhinneka.ac.id/" class="hover:text-blue-400">FPKH</a>
+          </li>
+          <li>
+            <a href="https://fkes.satyaterrabhinneka.ac.id/" class="hover:text-blue-400">FKES</a>
+          </li>
+        </ul>
+      </div>
+      <!-- Kontak -->
+      <div>
+        <h3 class="font-bold mb-2">Kontak</h3>
+        <p>📍 Jl. Sunggal, Gg Bakul No. 123, Kota Medan</p>
+        <p>📞 (021) 12345678</p>
+        <p>✉️ satyaterrabhinneka@satyaterrabhinneka.ac.id</p>
+      </div>
+    </div>
+    <div class="text-center mt-6 text-gray-400">
+      &copy; 2025 Universitas Satya Terra Bhinneka. All rights reserved.
+    </div>
+
+     <button
+      id="scrollToTopBtn"
+      class="fixed bottom-6 right-6 bg-green-600 text-white p-3 rounded-full shadow-lg hover:bg-green-700 transition-all duration-300 opacity-0 translate-y-10 z-50"
+      aria-label="Scroll to top"
+    >
+      <!-- Ikon panah -->
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        class="h-6 w-6"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        stroke-width="2"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M5 15l7-7 7 7"
+        />
+      </svg>
+    </button>
+  </footer>
+
+
+  <script>
+    // JS untuk toggle menu mobile
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
+
+  <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+        // Deteksi posisi scroll
+        window.addEventListener("scroll", () => {
+          if (window.scrollY > 200) {
+            scrollToTopBtn.classList.remove("opacity-0", "translate-y-10");
+            scrollToTopBtn.classList.add("opacity-100", "translate-y-0");
+          } else {
+            scrollToTopBtn.classList.add("opacity-0", "translate-y-10");
+            scrollToTopBtn.classList.remove("opacity-100", "translate-y-0");
+          }
+        });
+
+        // Scroll ke atas dengan halus
+        scrollToTopBtn.addEventListener("click", () => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+        });
+      });
+    </script>
+
+
+
+  <!-- Script Accordion -->
+  <script>
+    document.querySelectorAll(".toggle-faq").forEach((btn) => {
+      btn.addEventListener("click", () => {
+        const content = btn.nextElementSibling;
+        const icon = btn.querySelector(".icon");
+
+        if (content.classList.contains("hidden")) {
+          content.classList.remove("hidden");
+          icon.textContent = "−";
+        } else {
+          content.classList.add("hidden");
+          icon.textContent = "+";
+        }
+      });
+    });
+  </script>
+  <script src="../api/pages/form.js"></script>
+  <script src="../api/pages/homepage.js"></script>
+
+</body>
+
+</html>

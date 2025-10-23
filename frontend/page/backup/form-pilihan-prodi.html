@@ -1,0 +1,57 @@
+   <!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulir Pendaftaran Mahasiswa Baru</title>
+  <link rel="stylesheet" href="../../aset/style.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/choices.js/public/assets/styles/choices.min.css">
+   <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+      background: #f8f9fa;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+    label {
+      display: block;
+      margin-bottom: 8px;
+      font-weight: bold;
+    }
+    select {
+      width: 100%;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+<form action="" id="form-pilihan-prodi" method="POST">
+  <fieldset>
+        <legend>Pilihan Program Studi</legend>
+        <label>Program Studi yang diminati:</label>
+         <select name="prodi" id="prodi">
+           <option>-- Pilih Prodi -- </option>
+           <option value="kb">D3 Kebidanan</option>
+           <option value="ab">S1 Agribisnis</option>
+           <option value="bd">S1 Bisnis Digital</option>
+           <option value="if">S1 Informatika</option>
+          <option value="kw">S1 Kewirausahaan</option>
+          <option value="mh">S1 Manajemen Hutan</option>
+        </select>
+
+          <label>Waktu Kuliah (Senin - Sabtu):</label>
+        <select name="jadwal" id="jadwal">
+          <option>-- Pilih Jadwal --</option>
+          <option value="sg">Siang (Pukul 14.00 - 17.00 WIB)</option>
+          <option value="sr">Sore (Pukul 17.30 - 20.40 WIB)</option>
+        </select>
+      </fieldset>
+        <button type="submit">Submit</button>
+            </form>
+</div>
+  <script type="module" src="../api/calon_mahasiswa_baru/tambah_data_prodi_calon_mahasiswa.js"></script>
+
+    </body>

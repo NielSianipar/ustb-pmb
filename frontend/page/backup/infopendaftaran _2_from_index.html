@@ -1,0 +1,1017 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Info Pendaftaran PMB</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <meta name="description" content="Informasi pendaftaran mahasiswa baru." />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+        rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Nunito', sans-serif;
+        }
+
+        :root {
+            --clr-primary: #0d5cab;
+            --clr-primary-dark: #083b6e;
+            --clr-accent: #ffb400;
+            --clr-bg: #f5f7fb;
+            --clr-text: #1f2d3d;
+            --clr-text-light: #5a6b7d;
+            --radius: 6px;
+            --max-width: 1180px;
+            font-size: 16px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Roboto, Arial, sans-serif;
+            color: var(--clr-text);
+            background: var(--clr-bg);
+            line-height: 1.52;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            color: var(--clr-primary);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Top Bar */
+        .top-bar {
+            background: var(--clr-primary-dark);
+            color: #fff;
+            font-size: .78rem;
+            letter-spacing: .5px;
+        }
+
+        .top-bar__inner {
+            max-width: var(--max-width);
+            margin: auto;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+            justify-content: space-between;
+            padding: .4rem 1rem;
+            flex-wrap: wrap;
+        }
+
+        .top-bar__contact {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .top-bar__contact span {
+            display: flex;
+            align-items: center;
+            gap: .35rem;
+            opacity: .9;
+        }
+
+        .social a {
+            display: inline-flex;
+            width: 26px;
+            height: 26px;
+            background: #ffffff22;
+            color: #fff;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+            font-size: .65rem;
+            font-weight: 600;
+            transition: .25s;
+        }
+
+        .social a:hover {
+            background: #fff;
+            color: var(--clr-primary-dark);
+            text-decoration: none;
+        }
+
+        /* Header / Nav */
+        header {
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 50;
+            box-shadow: 0 2px 4px -2px rgba(0, 0, 0, .08);
+        }
+
+        .nav {
+            max-width: var(--max-width);
+            margin: auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: .9rem 1rem;
+            gap: 1.5rem;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: .75rem;
+            font-weight: 600;
+            font-size: 1.05rem;
+            color: var(--clr-primary-dark);
+            text-transform: uppercase;
+            letter-spacing: .5px;
+        }
+
+        .brand img {
+            height: 44px;
+            width: auto;
+        }
+
+        .menu-toggle {
+            display: none;
+            background: none;
+            border: 1px solid #d0d9e2;
+            width: 44px;
+            height: 42px;
+            border-radius: var(--radius);
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            gap: .25rem;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+
+        nav li {
+            position: relative;
+        }
+
+        nav a {
+            display: block;
+            padding: .65rem 1rem;
+            font-size: .88rem;
+            font-weight: 500;
+            color: var(--clr-text);
+            border-radius: var(--radius);
+            transition: .25s;
+            /* Added menu items: Program Studi, Beasiswa, Biaya Kuliah, Cara Daftar, Kontak, Daftar Online */
+            white-space: nowrap;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background: var(--clr-primary);
+            color: #fff;
+            text-decoration: none;
+        }
+
+        /* Hero */
+        .hero {
+            background:
+                linear-gradient(135deg, rgba(13, 92, 171, .85), rgba(6, 44, 92, .88)),
+                url('https://images.unsplash.com/photo-1523580846011-d3a5bc25702b?auto=format&q=60&w=1600') center/cover;
+            color: #fff;
+            padding: 4.5rem 1rem 3rem;
+        }
+
+        .hero__inner {
+            max-width: var(--max-width);
+            margin: auto;
+            display: grid;
+            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            align-items: center;
+        }
+
+        .hero h1 {
+            margin: 0 0 1rem;
+            font-size: clamp(1.9rem, 4vw, 2.8rem);
+            line-height: 1.15;
+            font-weight: 700;
+        }
+
+        .hero p {
+            margin: 0 0 1.25rem;
+            font-size: 1.05rem;
+            max-width: 650px;
+        }
+
+        .btn {
+            --btn-bg: var(--clr-accent);
+            background: var(--btn-bg);
+            color: #212428;
+            display: inline-flex;
+            align-items: center;
+            gap: .5rem;
+            font-weight: 600;
+            font-size: .9rem;
+            padding: .85rem 1.35rem;
+            border-radius: 40px;
+            text-decoration: none;
+            position: relative;
+            box-shadow: 0 4px 10px -2px rgba(0, 0, 0, .35), 0 0 0 0 var(--btn-bg);
+            transition: .3s;
+        }
+
+        .btn:hover {
+            box-shadow: 0 6px 16px -2px rgba(0, 0, 0, .45), 0 0 0 4px #ffffff40;
+            text-decoration: none;
+            transform: translateY(-2px);
+        }
+
+        .stats {
+            display: flex;
+            gap: 1.75rem;
+            flex-wrap: wrap;
+            margin-top: 1.5rem;
+        }
+
+        .stat-box {
+            min-width: 150px;
+            background: #ffffff14;
+            padding: 1rem 1.1rem;
+            border: 1px solid #ffffff3b;
+            border-radius: var(--radius);
+            backdrop-filter: blur(3px);
+        }
+
+        .stat-box b {
+            display: block;
+            font-size: 1.45rem;
+            margin-bottom: .35rem;
+        }
+
+        /* Main Layout */
+        .main {
+            max-width: var(--max-width);
+            margin: -2.5rem auto 3rem;
+            padding: 0 1rem;
+            display: grid;
+            grid-template-columns: 260px 1fr;
+            gap: 2rem;
+        }
+
+        @media (max-width:990px) {
+            .main {
+                grid-template-columns: 1fr;
+            }
+
+            .sidebar {
+                order: 2;
+            }
+        }
+
+        /* Sidebar */
+        .sidebar {
+            align-self: start;
+            position: sticky;
+            top: 90px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+        }
+
+        .card {
+            background: #fff;
+            padding: 1.15rem 1.1rem 1.35rem;
+            border-radius: var(--radius);
+            box-shadow: 0 4px 14px -4px rgba(15, 46, 84, .12);
+            border: 1px solid #e2e8f0;
+        }
+
+        .card h3 {
+            margin: 0 0 .85rem;
+            font-size: 1.05rem;
+            color: var(--clr-primary-dark);
+            letter-spacing: .3px;
+        }
+
+        .mini-nav a {
+            display: flex;
+            gap: .5rem;
+            padding: .55rem .65rem;
+            font-size: .8rem;
+            border-radius: 4px;
+            border: 1px solid #e3e9f2;
+            margin-bottom: .4rem;
+            font-weight: 500;
+            color: var(--clr-text-light);
+            position: relative;
+            background: #f9fbfd;
+            transition: .25s;
+        }
+
+        .mini-nav a:hover,
+        .mini-nav a:focus {
+            background: #fff;
+            color: var(--clr-primary-dark);
+            border-color: var(--clr-primary);
+            text-decoration: none;
+        }
+
+        .badge {
+            background: var(--clr-primary);
+            color: #fff;
+            font-size: .62rem;
+            letter-spacing: .5px;
+            padding: .25rem .5rem;
+            border-radius: 20px;
+            font-weight: 600;
+            margin-left: auto;
+            align-self: center;
+        }
+
+        /* Content */
+        article {
+            background: #fff;
+            padding: 2.1rem 2rem 2.5rem;
+            border-radius: var(--radius);
+            box-shadow: 0 6px 22px -6px rgba(15, 46, 84, .15);
+            border: 1px solid #e2e8f0;
+        }
+
+        article h2 {
+            margin: 0 0 1.1rem;
+            font-size: 1.65rem;
+            line-height: 1.18;
+            color: var(--clr-primary-dark);
+            position: relative;
+        }
+
+        article h2::after {
+            content: "";
+            width: 70px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--clr-primary), var(--clr-accent));
+            position: absolute;
+            left: 0;
+            bottom: -8px;
+            border-radius: 2px;
+        }
+
+        section+section {
+            margin-top: 2.5rem;
+        }
+
+        section h3 {
+            margin: 0 0 .75rem;
+            font-size: 1.25rem;
+            color: var(--clr-primary);
+        }
+
+        p {
+            margin: .65rem 0 1rem;
+        }
+
+        ul,
+        ol {
+            margin: .2rem 0 1.1rem 1.2rem;
+            padding: 0;
+        }
+
+        li {
+            margin: .3rem 0;
+        }
+
+        .grid {
+            display: grid;
+            gap: 1.25rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            margin: 1.2rem 0 1.5rem;
+        }
+
+        .info-box {
+            padding: 1.15rem 1rem 1.2rem;
+            border: 1px solid #e3e9f2;
+            border-radius: var(--radius);
+            background: linear-gradient(145deg, #ffffff, #f1f5f9);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .info-box h4 {
+            margin: 0 0 .55rem;
+            font-size: .95rem;
+            letter-spacing: .3px;
+            color: var(--clr-primary-dark);
+        }
+
+        .info-box small {
+            display: block;
+            font-size: .65rem;
+            letter-spacing: 1px;
+            font-weight: 600;
+            color: var(--clr-primary);
+            margin-bottom: .4rem;
+            text-transform: uppercase;
+        }
+
+        /* Timeline / Steps */
+        .steps {
+            counter-reset: step;
+            display: grid;
+            gap: 1.25rem;
+            margin: 1.25rem 0 1.75rem;
+        }
+
+        .step {
+            position: relative;
+            padding: 1.05rem 1rem 1.05rem 3.25rem;
+            background: #f9fafc;
+            border: 1px solid #e5edf5;
+            border-radius: var(--radius);
+            transition: .3s;
+            overflow: hidden;
+        }
+
+        .step:before {
+            counter-increment: step;
+            content: counter(step);
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 34px;
+            height: 34px;
+            border-radius: 50%;
+            display: grid;
+            place-items: center;
+            font-weight: 600;
+            font-size: .85rem;
+            color: #fff;
+            background: linear-gradient(135deg, var(--clr-primary), var(--clr-primary-dark));
+            box-shadow: 0 2px 6px -1px rgba(0, 0, 0, .3);
+        }
+
+        .step:hover {
+            background: #fff;
+            border-color: var(--clr-primary);
+            box-shadow: 0 6px 20px -6px rgba(15, 46, 84, .25);
+        }
+
+        /* Table / Schedule */
+        .table-wrap {
+            overflow-x: auto;
+            border: 1px solid #e2e9f2;
+            border-radius: var(--radius);
+            background: #fff;
+            margin: .75rem 0 1.5rem;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            min-width: 680px;
+            font-size: .82rem;
+        }
+
+        th,
+        td {
+            padding: .7rem .85rem;
+            text-align: left;
+            border-bottom: 1px solid #eef2f7;
+            vertical-align: top;
+        }
+
+        th {
+            background: #f1f6fb;
+            font-weight: 600;
+            font-size: .75rem;
+            text-transform: uppercase;
+            letter-spacing: .6px;
+            color: var(--clr-primary-dark);
+        }
+
+        tbody tr:hover td {
+            background: #fafcff;
+        }
+
+        .tag {
+            display: inline-block;
+            padding: .25rem .55rem;
+            background: var(--clr-primary);
+            color: #fff;
+            font-size: .62rem;
+            letter-spacing: .4px;
+            border-radius: 14px;
+            font-weight: 600;
+        }
+
+        .tag.alt {
+            background: var(--clr-accent);
+            color: #252525;
+        }
+
+        /* Callout */
+        .callout {
+            padding: 1rem 1.1rem 1.05rem 3.2rem;
+            background: #fffceb;
+            border: 1px solid #f8e9b2;
+            border-left: 6px solid var(--clr-accent);
+            border-radius: var(--radius);
+            position: relative;
+            font-size: .85rem;
+            line-height: 1.45;
+            margin: 1.25rem 0 1.75rem;
+        }
+
+        .callout:before {
+            content: "!";
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--clr-accent);
+            display: grid;
+            place-items: center;
+            font-weight: 700;
+            color: #222;
+            font-size: 1rem;
+            box-shadow: 0 2px 6px -2px rgba(0, 0, 0, .35);
+        }
+
+        /* Footer */
+        footer {
+            background: #0a3e72;
+            color: #d2e4f5;
+            padding: 2.8rem 1rem 2.2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        footer:before {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 12% 18%, rgba(255, 255, 255, .12), transparent 50%),
+                radial-gradient(circle at 85% 70%, rgba(255, 255, 255, .1), transparent 55%);
+            opacity: .55;
+            pointer-events: none;
+        }
+
+        .footer-inner {
+            max-width: var(--max-width);
+            margin: auto;
+            display: grid;
+            gap: 2.2rem;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            position: relative;
+            z-index: 2;
+        }
+
+        footer h4 {
+            margin: 0 0 .65rem;
+            font-size: 1rem;
+            letter-spacing: .5px;
+            color: #fff;
+        }
+
+        footer p,
+        footer li,
+        footer a {
+            font-size: .78rem;
+            line-height: 1.5;
+        }
+
+        footer a {
+            color: #fff;
+            opacity: .9;
+        }
+
+        footer a:hover {
+            opacity: 1;
+            text-decoration: none;
+        }
+
+        .footer-bottom {
+            margin-top: 2rem;
+            padding-top: 1rem;
+            border-top: 1px solid #ffffff22;
+            text-align: center;
+            font-size: .7rem;
+            letter-spacing: .5px;
+            opacity: .8;
+        }
+
+        /* Utilities */
+        .mt0 {
+            margin-top: 0;
+        }
+
+        .mb0 {
+            margin-bottom: 0;
+        }
+
+        .highlight {
+            background: #e7f2ff;
+            padding: .08rem .45rem;
+            border-radius: 4px;
+            font-size: .8rem;
+            font-weight: 600;
+            color: var(--clr-primary-dark);
+        }
+
+        @media (max-width:860px) {
+            nav ul {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                background: #fff;
+                flex-direction: column;
+                width: 240px;
+                padding: .6rem;
+                border: 1px solid #d9e3ed;
+                border-radius: var(--radius);
+                box-shadow: 0 10px 30px -8px rgba(15, 46, 84, .25);
+                opacity: 0;
+                visibility: hidden;
+                transform: translateY(8px);
+                transition: .3s;
+                z-index: 150;
+            }
+
+            nav ul.open {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+
+            nav a {
+                padding: .7rem .85rem;
+                border-radius: 5px;
+            }
+
+            .menu-toggle {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top-bar">
+        <div class="top-bar__inner">
+            <div class="top-bar__contact">
+                <span>Telp: (000) 1234-5678</span>
+                <span>Email: pmb@example.ac.id</span>
+                <span>WhatsApp: +62 811-0000-111</span>
+            </div>
+            <div class="social">
+                <a href="#" aria-label="Facebook">f</a>
+                <a href="#" aria-label="Instagram">ig</a>
+                <a href="#" aria-label="YouTube">yt</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navabar -->
+    <header class="bg-white shadow fixed w-full top-0 z-50">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+            <!-- Logo -->
+            <div class="flex items-center space-x-2">
+                <img src="../aset/background/logostb.png" alt="Logo" class="h-10" />
+            </div>
+            <!-- Menu -->
+            <nav class="hidden md:flex space-x-14">
+                <a class="hover:text-blue-600" id="index" style="cursor: pointer;">Home</a>
+                <a class="hover:text-blue-600" id="pendaftaran" style="cursor: pointer;">Info Pendaftaran</a>
+                <a class="hover:text-blue-600" id="beasiswa" style="cursor: pointer;">Beasiswa</a>
+                <a class="hover:text-blue-600" id="biayakuliah" style="cursor: pointer;">Biaya Kuliah</a>
+                <a class="hover:text-blue-600" id="sarana" style="cursor: pointer;">Sarana & Prasara</a>
+                <a class="hover:text-blue-600" id="faq" style="cursor: pointer;">FAQ</a>
+
+            </nav>
+            <!-- Button -->
+            <a class="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700" id="form-pendaftaran"
+                style="cursor: pointer;">Pendaftaran</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="hero__inner">
+            <div>
+                <h1>Informasi Penerimaan Mahasiswa Baru</h1>
+                <p>Halaman ini menyediakan rangkuman jadwal, persyaratan, tahapan dan ketentuan umum penerimaan
+                    mahasiswa baru untuk tahun akademik berjalan.</p>
+                <a href="#pendaftaran" class="btn">Mulai Lihat Detail →</a>
+                <div class="stats">
+                    <div class="stat-box">
+                        <b>3</b>
+                        Gelombang Pendaftaran
+                    </div>
+                    <div class="stat-box">
+                        <b>25+</b>
+                        Program Studi
+                    </div>
+                    <div class="stat-box">
+                        <b>50%</b>
+                        Potensi Beasiswa
+                    </div>
+                </div>
+            </div>
+            <div aria-hidden="true">
+                <img src="https://images.unsplash.com/photo-1588072432836-e10032774350?auto=format&q=60&w=1000"
+                    alt="Students Collaboration"
+                    style="border:6px solid #ffffff33; border-radius:22px; box-shadow:0 10px 40px -10px rgba(0,0,0,.5);">
+            </div>
+        </div>
+    </section>
+
+    <main class="main" id="pendaftaran">
+        <aside class="sidebar">
+            <div class="card">
+                <h3>Navigasi</h3>
+                <div class="mini-nav">
+                    <a href="#jadwal">Jadwal <span class="badge">Waktu</span></a>
+                    <a href="#syarat">Persyaratan</a>
+                    <a href="#alur">Alur Pendaftaran</a>
+                    <a href="#biaya">Biaya & Pembayaran</a>
+                    <a href="#seleksi">Proses Seleksi</a>
+                    <a href="#hasil">Pengumuman</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Kontak PMB</h3>
+                <p style="font-size:.78rem; margin:.25rem 0 .5rem;">Tim penerimaan siap membantu.</p>
+                <p style="font-size:.75rem; line-height:1.35;">
+                    Hotline: (000) 1234-5678<br>
+                    WhatsApp: +62 811-0000-111<br>
+                    Email: pmb@example.ac.id
+                </p>
+                <a href="#" class="btn"
+                    style="--btn-bg:var(--clr-primary); color:#fff; width:100%; justify-content:center;">Chat
+                    Sekarang</a>
+            </div>
+            <div class="card">
+                <h3>Download</h3>
+                <ul style="list-style:none; padding:0; margin:0; font-size:.72rem;">
+                    <li><a href="#">Brosur PMB (PDF)</a></li>
+                    <li><a href="#">Panduan Pendaftaran</a></li>
+                    <li><a href="#">Daftar Program Studi</a></li>
+                    <li><a href="#">Form Rekomendasi</a></li>
+                </ul>
+            </div>
+        </aside>
+
+        <article>
+            <h2>Informasi Pendaftaran</h2>
+            <p class="mt0">Berikut adalah rangkuman utama terkait penerimaan mahasiswa baru tahun akademik saat ini.
+                Data dapat berubah sewaktu-waktu, harap cek berkala.</p>
+
+            <section id="jadwal">
+                <h3>Jadwal Penting</h3>
+                <p>Rencana jadwal per gelombang pendaftaran (tentatif):</p>
+                <div class="table-wrap">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Gelombang</th>
+                                <th>Periode Pendaftaran</th>
+                                <th>Ujian / Seleksi</th>
+                                <th>Pengumuman</th>
+                                <th>Daftar Ulang</th>
+                                <th>Keterangan</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><span class="tag">Gel 1</span></td>
+                                <td>10 Jan - 15 Mar</td>
+                                <td>20 Mar</td>
+                                <td>25 Mar</td>
+                                <td>25 Mar - 10 Apr</td>
+                                <td>Disarankan bagi pendaftar awal</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tag alt">Gel 2</span></td>
+                                <td>16 Mar - 25 Mei</td>
+                                <td>30 Mei</td>
+                                <td>04 Jun</td>
+                                <td>04 Jun - 18 Jun</td>
+                                <td>Kuota mulai menurun</td>
+                            </tr>
+                            <tr>
+                                <td><span class="tag">Gel 3</span></td>
+                                <td>26 Mei - 20 Jul</td>
+                                <td>24 Jul</td>
+                                <td>29 Jul</td>
+                                <td>29 Jul - 08 Agu</td>
+                                <td>Gelombang terakhir</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="callout">
+                    Jadwal dapat disesuaikan. Pastikan memantau kanal resmi dan email Anda.
+                </div>
+            </section>
+
+            <section id="syarat">
+                <h3>Persyaratan Umum</h3>
+                <div class="grid">
+                    <div class="info-box">
+                        <small>Pendaftaran</small>
+                        <h4>Kualifikasi Akademik</h4>
+                        <ul style="margin:.4rem 0 0 1rem; font-size:.75rem;">
+                            <li>Lulusan SMA/SMK/MA atau sederajat.</li>
+                            <li>Ijazah / SKL tersedia sebelum daftar ulang.</li>
+                            <li>Nilai rapor konsisten.</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <small>Dokumen</small>
+                        <h4>Berkas Digital</h4>
+                        <ul style="margin:.4rem 0 0 1rem; font-size:.75rem;">
+                            <li>Kartu Identitas (KTP/KK).</li>
+                            <li>Scan Rapor (semester 1-5/6).</li>
+                            <li>Pas foto terbaru.</li>
+                        </ul>
+                    </div>
+                    <div class="info-box">
+                        <small>Tambahan</small>
+                        <h4>Opsional</h4>
+                        <ul style="margin:.4rem 0 0 1rem; font-size:.75rem;">
+                            <li>Sertifikat prestasi.</li>
+                            <li>Surat rekomendasi.</li>
+                            <li>Bukti kegiatan organisasi.</li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+
+            <section id="alur">
+                <h3>Alur Pendaftaran</h3>
+                <p>Langkah-langkah ringkas proses pendaftaran online:</p>
+                <div class="steps">
+                    <div class="step">
+                        Buat akun PMB, verifikasi email dan lengkapi profil dasar.
+                    </div>
+                    <div class="step">
+                        Unggah dokumen dan cek pratinjau kelengkapan berkas.
+                    </div>
+                    <div class="step">
+                        Lakukan pembayaran formulir sesuai instruksi virtual account.
+                    </div>
+                    <div class="step">
+                        Finalisasi pilihan program studi (maks 2-3 opsi berbeda).
+                    </div>
+                    <div class="step">
+                        Ikuti seleksi (tes akademik / portofolio / wawancara) sesuai jadwal.
+                    </div>
+                    <div class="step">
+                        Cek pengumuman. Jika diterima, lakukan daftar ulang dan unggah bukti bayar.
+                    </div>
+                </div>
+            </section>
+
+            <section id="biaya">
+                <h3>Biaya dan Pembayaran</h3>
+                <p>Komponen biaya awal meliputi formulir pendaftaran, uang pengembangan dan SPP semester pertama. Skema
+                    cicilan dan beasiswa tersedia untuk kandidat tertentu.</p>
+                <ul>
+                    <li><strong>Biaya Formulir:</strong> Rp 300.000 (non-refundable).</li>
+                    <li><strong>Uang Pengembangan:</strong> Variatif per program studi.</li>
+                    <li><strong>SPP Semester:</strong> Disesuaikan tipe program (reguler / malam).</li>
+                </ul>
+                <p>Pembayaran hanya melalui kanal resmi (VA bank mitra). Hindari pihak tidak dikenal.</p>
+            </section>
+
+            <section id="seleksi">
+                <h3>Proses Seleksi</h3>
+                <ol>
+                    <li>Seleksi administrasi: verifikasi berkas dan nilai rapor.</li>
+                    <li>Tes / Wawancara: sesuai kebutuhan program (jika diperlukan).</li>
+                    <li>Penilaian portofolio: khusus program berbasis kreativitas.</li>
+                    <li>Rekap skor dan pemeringkatan.</li>
+                </ol>
+                <p>Kriteria mencakup aspek akademik, potensi, konsistensi nilai, dan (bila ada) prestasi tambahan.</p>
+            </section>
+
+            <section id="hasil">
+                <h3>Pengumuman Hasil</h3>
+                <p>Hasil seleksi ditayangkan melalui dashboard akun dan dikirim ke email terdaftar. Pastikan alamat
+                    email aktif.</p>
+                <p>Jika diterima, lakukan daftar ulang sebelum batas berakhir. Keterlambatan dapat mengakibatkan
+                    pencabutan kuota.</p>
+            </section>
+
+            <section id="faq">
+                <h3>FAQ Singkat</h3>
+                <p><span class="highlight">Q:</span> Apakah bisa ganti program studi setelah finalisasi? <br>
+                    <span class="highlight">A:</span> Perubahan terbatas sebelum masuk tahap seleksi, hubungi admin.
+                </p>
+                <p><span class="highlight">Q:</span> Apakah tersedia beasiswa? <br>
+                    <span class="highlight">A:</span> Ada beberapa jalur prestasi dan bantuan finansial, info di menu
+                    Beasiswa.
+                </p>
+                <p><span class="highlight">Q:</span> Bagaimana jika lupa password? <br>
+                    <span class="highlight">A:</span> Gunakan fitur reset pada halaman login.
+                </p>
+            </section>
+        </article>
+    </main>
+
+    <footer>
+        <div class="footer-inner">
+            <div>
+                <h4>Tentang PMB</h4>
+                <p>Pusat informasi penerimaan mahasiswa baru untuk kampus. Transparan, responsif dan terintegrasi.</p>
+            </div>
+            <div>
+                <h4>Kontak</h4>
+                <ul style="list-style:none; margin:0; padding:0;">
+                    <li>Telp: (000) 1234-5678</li>
+                    <li>WhatsApp: +62 811-0000-111</li>
+                    <li>Email: pmb@example.ac.id</li>
+                    <li>Alamat: Jl. Kampus No. 1</li>
+                </ul>
+            </div>
+            <div>
+                <h4>Tautan</h4>
+                <ul style="list-style:none; margin:0; padding:0;">
+                    <li><a href="#">Program Studi</a></li>
+                    <li><a href="#">Kalender Akademik</a></li>
+                    <li><a href="#">Beasiswa</a></li>
+                    <li><a href="#">Formulir Online</a></li>
+                </ul>
+            </div>
+            <div>
+                <h4>Ikuti Kami</h4>
+                <p style="margin:0 0 .5rem;">Dapatkan pembaruan terbaru.</p>
+                <div class="social">
+                    <a href="#">f</a>
+                    <a href="#">ig</a>
+                    <a href="#">yt</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            © <span id="year"></span> PMB Kampus. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+        const menuBtn = document.getElementById('menuBtn');
+        const mainMenu = document.getElementById('mainMenu');
+        menuBtn.addEventListener('click', () => {
+            mainMenu.classList.toggle('open');
+            menuBtn.setAttribute('aria-expanded', mainMenu.classList.contains('open'));
+        });
+        document.addEventListener('click', (e) => {
+            if (!mainMenu.contains(e.target) && !menuBtn.contains(e.target)) {
+                mainMenu.classList.remove('open');
+                menuBtn.setAttribute('aria-expanded', 'false');
+            }
+        });
+        document.getElementById('year').textContent = new Date().getFullYear();
+
+        // Smooth scroll
+        document.querySelectorAll('a[href^="#"]').forEach(a => {
+            a.addEventListener('click', e => {
+                const id = a.getAttribute('href');
+                if (id.length > 1) {
+                    const el = document.querySelector(id);
+                    if (el) {
+                        e.preventDefault();
+                        window.scrollTo({
+                            top: el.getBoundingClientRect().top + window.scrollY - 90,
+                            behavior: 'smooth'
+                        });
+                        if (window.innerWidth < 860) mainMenu.classList.remove('open');
+                    }
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
+</ul>
+</div></a></div>
